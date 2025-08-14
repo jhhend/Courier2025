@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"mus_mainmenu",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":38.405804,
+  "name":"mus_mainmenu",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mus_mainmenu.wav",
+  "type":0,
+  "volume":1.0,
+}

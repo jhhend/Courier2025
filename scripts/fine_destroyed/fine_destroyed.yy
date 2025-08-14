@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"fine_destroyed",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fine_destroyed",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

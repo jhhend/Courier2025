@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"easter_egg_one",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"easter_egg_one",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

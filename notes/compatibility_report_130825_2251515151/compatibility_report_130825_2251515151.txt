@@ -1,0 +1,276 @@
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\player_input\player_input.gml
+Converted description /// @description player_input()
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\player_move\player_move.gml
+Converted description /// @description player_move()
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\player_roll\player_roll.gml
+Converted description /// @description player_roll(direction)/// @param direction
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\player_shoot\player_shoot.gml
+Converted description /// @description player_shoot
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\player_jettison\player_jettison.gml
+Converted description /// @description player_jettison()
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\player_ability\player_ability.gml
+Converted description /// @description player_ability
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\player_cooldown\player_cooldown.gml
+Converted description /// @description set_cooldown()
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\player_determine_position\player_determine_position.gml
+Converted description /// @description player_determine_position()
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\destroy_object\destroy_object.gml
+Converted description /// @description destroy_other(obj)/// @param obj
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\destroy_other\destroy_other.gml
+Converted description /// @description destroy_other()
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\destroy_self\destroy_self.gml
+Converted description /// @description destroy_self()
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\destroy_id\destroy_id.gml
+Converted description /// @description destroy_id(id)/// @param id
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\draw_slots\draw_slots.gml
+Converted builtin - line 25: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 30: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 25: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 30: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted description /// @description draw_slots
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\clear_slot\clear_slot.gml
+Converted description /// @description clear_slot(slot)/// @param slot
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\jettison_cargo\jettison_cargo.gml
+Converted description /// @description jettison_cargo()
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\set_shop_buttons\set_shop_buttons.gml
+Converted description /// @description set_shop_buttons()
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\load_shop_flavortext\load_shop_flavortext.gml
+Converted description /// @description load_shop_flavortext();
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\true_false\true_false.gml
+Converted description /// @description true_false(var)/// @param var
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\remove_prefix\remove_prefix.gml
+Converted description /// @description remove_prefix(room)/// @param room
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\remove_prefix_underscore\remove_prefix_underscore.gml
+Converted description /// @description remove_prefix_underscore(room)/// @param room
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\chance\chance.gml
+Converted description /// @description chance(odds)/// @param odds
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\choose_odds\choose_odds.gml
+Converted description /// @description choose_odds(odd1, cond, else)/// @param odd1
+/// @param  cond
+/// @param  else
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\save\save.gml
+Converted description /// @description save()
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\load\load.gml
+Converted description /// @description load()
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\save_options\save_options.gml
+Converted description /// @description save_options()
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\load_options\load_options.gml
+Converted description /// @description load_options()
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\save_hold\save_hold.gml
+Converted description /// @description save_hold()
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\load_hold\load_hold.gml
+Converted description /// @description load_hold()
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\spawn_money\spawn_money.gml
+Converted description /// @description spawn_money(lowbound, highbound);/// @param lowbound
+/// @param  highbound
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\spawn_police\spawn_police.gml
+Converted description /// @description spawn_police()
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\hint\hint.gml
+Converted description /// @description hint()
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\display_hint\display_hint.gml
+Converted description /// @description display_hint(x, y, hintvar)/// @param x
+/// @param  y
+/// @param  hintvar
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\play_sound\play_sound.gml
+Converted description /// @description play_sound(snd, priority, loop)/// @param snd
+/// @param  priority
+/// @param  loop
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\play_music\play_music.gml
+Converted description /// @description play_music(snd, priority, loop)/// @param snd
+/// @param  priority
+/// @param  loop
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\bet_amount\bet_amount.gml
+Converted description /// @description bet_amount(nth)/// @param nth
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\draw_distance_circle\draw_distance_circle.gml
+Converted description /// @description draw_distance_circle(radius, fillcol, bordercol)/// @param radius
+/// @param  fillcol
+/// @param  bordercol
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\draw_text_parentheses\draw_text_parentheses.gml
+Converted description /// @description draw_text_parentheses(x, y, string)/// @param x
+/// @param  y
+/// @param  string
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\draw_text_quotations\draw_text_quotations.gml
+Converted description /// @description draw_text_quotations(x, y, string)/// @param x
+/// @param  y
+/// @param  string
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\choose_colors\choose_colors.gml
+Converted description /// @description choose_colors(zone)/// @param zone
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\heal\heal.gml
+Converted description /// @description heal();
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\fine_destroyed\fine_destroyed.gml
+Converted description /// @description fine_destroyed()
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\fine_robbed\fine_robbed.gml
+Converted description /// @description fine_robbed()
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\scripts\fine_arrested\fine_arrested.gml
+Converted description /// @description fine_arrested()
+
+GameMaker Studio 1 font texture has been backed up at F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\fonts\fnt_hud\fnt_hud.gms1.png
+GameMaker Studio 1 font texture has been backed up at F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\fonts\fnt_diamond\fnt_diamond.gms1.png
+GameMaker Studio 1 font texture has been backed up at F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\fonts\fnt_standard\fnt_standard.gms1.png
+GameMaker Studio 1 font texture has been backed up at F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\fonts\fnt_title\fnt_title.gms1.png
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\objects\obj_player\Draw_0.gml
+Converted builtin - line 28: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 40: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 51: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 65: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 74: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 170: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 173: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 183: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 191: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 28: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 40: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 51: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 65: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 74: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 170: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 173: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 183: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 191: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 28: view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 170: view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 173: view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 183: view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 183: view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 191: view_wview[0] -> __view_get( e__VW.WView, 0 )
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\objects\obj_asteroid\Collision_e024bf9c-31a6-4142-ae6a-d218f29d9586.gml
+Converted builtin - line 13: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 13: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 14: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 14: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 13: view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 14: view_hview[0] -> __view_get( e__VW.HView, 0 )
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\objects\obj_laser\Step_0.gml
+Converted builtin - line 5: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 5: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 5: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 5: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 5: view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 5: view_hview[0] -> __view_get( e__VW.HView, 0 )
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\objects\obj_data\Alarm_0.gml
+Converted description /// @description Blessing alarm
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\objects\obj_pause\Create_0.gml
+Converted builtin - line 15: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 15: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 16: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 16: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 15: view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 16: view_hview[0] -> __view_get( e__VW.HView, 0 )
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\objects\obj_pause\Step_0.gml
+Converted builtin - line 5: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 5: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 6: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 6: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 5: view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 6: view_hview[0] -> __view_get( e__VW.HView, 0 )
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\objects\obj_pause\Draw_0.gml
+Converted builtin - line 2: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 14: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 25: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 33: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 3: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 4: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 14: view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 25: view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 33: view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 3: view_hview[0] -> __view_get( e__VW.HView, 0 )
+Converted builtin - line 4: view_hview[0] -> __view_get( e__VW.HView, 0 )
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\objects\obj_fps_display\Create_0.gml
+Converted builtin - line 1: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 2: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 1: view_wview[0] -> __view_get( e__VW.WView, 0 )
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\objects\obj_fps_display\Step_0.gml
+Converted builtin - line 1: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 2: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 1: view_wview[0] -> __view_get( e__VW.WView, 0 )
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\objects\obj_pod_anmiation\Step_0.gml
+Converted builtin - line 4: view_xview = 0 -> __view_set( e__VW.XView, 0, 0 )
+Converted builtin - line 6: view_xview += random_range(-shake, shake) -> __view_set( e__VW.XView, 0, __view_get( e__VW.XView, 0 ) + (random_range(-shake, shake)) )
+Converted builtin - line 5: view_yview = 0 -> __view_set( e__VW.YView, 0, 0 )
+Converted builtin - line 7: view_yview += random_range(-shake, shake) -> __view_set( e__VW.YView, 0, __view_get( e__VW.YView, 0 ) + (random_range(-shake, shake)) )
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\objects\obj_view\Create_0.gml
+Converted builtin - line 1: view_object[0] = id -> __view_set( e__VW.Object, 0, id )
+
+Converting GML script: F:\MASTERDRIVE Backup\Game Design\COMPLETED OR RELEASED\Courier Master File\Courier.gmx - Copy\mvc\objects\obj_view\Step_2.gml
+Converted builtin - line 1: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 2: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 1: view_xview[0] = floor(__view_get( e__VW.XView, 0 )) -> __view_set( e__VW.XView, 0, floor(__view_get( e__VW.XView, 0 )) )
+Converted builtin - line 2: view_yview[0] = floor(__view_get( e__VW.YView, 0 )) -> __view_set( e__VW.YView, 0, floor(__view_get( e__VW.YView, 0 )) )
+
+Missing audiogroup for sound: 'snd_select' - setting to default audio group
+Missing audiogroup for sound: 'snd_laser' - setting to default audio group
+Missing audiogroup for sound: 'snd_explode' - setting to default audio group
+Missing audiogroup for sound: 'snd_purchase' - setting to default audio group
+Missing audiogroup for sound: 'snd_transport' - setting to default audio group
+Missing audiogroup for sound: 'snd_money' - setting to default audio group
+Missing audiogroup for sound: 'snd_bad' - setting to default audio group
+Missing audiogroup for sound: 'snd_ascend0' - setting to default audio group
+Missing audiogroup for sound: 'snd_ascend1' - setting to default audio group
+Missing audiogroup for sound: 'snd_ascend2' - setting to default audio group
+Missing audiogroup for sound: 'snd_ascend3' - setting to default audio group
+Missing audiogroup for sound: 'snd_error' - setting to default audio group
+Missing audiogroup for sound: 'mus_easter_egg_one' - setting to default audio group
+Missing audiogroup for sound: 'mus_mainmenu' - setting to default audio group
+Missing audiogroup for sound: 'mus_textcrawl' - setting to default audio group
+Missing audiogroup for sound: 'mus_gameworld' - setting to default audio group
+Game speed set to 60
+Added compatibility script 'instance\instance_create.gml'
+Added compatibility script 'object\object_get_depth.gml'
+Added compatibility script 'view\__view_get.gml'
+Added compatibility script 'view\__view_set.gml'
+Added compatibility script 'view\__view_set_internal.gml'
+Added compatibility script 'view\__init_view.gml'
+Added compatibility script '__init_global.gml'
+Added compatibility script '__global_object_depths.gml'

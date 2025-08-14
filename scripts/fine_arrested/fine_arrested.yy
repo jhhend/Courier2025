@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"fine_arrested",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fine_arrested",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

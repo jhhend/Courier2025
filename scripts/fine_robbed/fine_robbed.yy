@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"fine_robbed",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fine_robbed",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
