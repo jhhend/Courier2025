@@ -250,7 +250,6 @@
     {"id":{"name":"spawn_money","path":"scripts/spawn_money/spawn_money.yy",},},
     {"id":{"name":"spawn_police","path":"scripts/spawn_police/spawn_police.yy",},},
     {"id":{"name":"toggle_pause","path":"scripts/toggle_pause/toggle_pause.yy",},},
-    {"id":{"name":"true_false","path":"scripts/true_false/true_false.yy",},},
     {"id":{"name":"mus_easter_egg_one","path":"sounds/mus_easter_egg_one/mus_easter_egg_one.yy",},},
     {"id":{"name":"mus_gameworld","path":"sounds/mus_gameworld/mus_gameworld.yy",},},
     {"id":{"name":"mus_mainmenu","path":"sounds/mus_mainmenu/mus_mainmenu.yy",},},
