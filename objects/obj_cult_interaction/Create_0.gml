@@ -1,7 +1,7 @@
 price = 750;
 if global.blessing {
     text[0] = "Recieve Blessing ($0)";    
-} else if (global.blessing == false) {
+} else if (!global.blessing) {
     text[0] = "Recieve Blessing ($" + string(price) + ")";
 }
 
@@ -18,7 +18,7 @@ subtag = "Opposing faction has not been betrayed."
 
 if global.blessing {
     tagline = "You have been blessed, my child.";
-} else if global.blessing == false {
+} else if !global.blessing {
     tagline = "Have you come to recieve my blessing, child?";
 }
 

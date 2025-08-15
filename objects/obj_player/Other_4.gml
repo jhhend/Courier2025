@@ -2,7 +2,7 @@ if (room != rm_worldmap && room != rm_paradise_worldmap && room != rm_Paradise &
     instance_create(x, y, obj_dropoff);
 } else if room == rm_Paradise && global.podspawn {
     instance_create(x, y, obj_pod);
-} else if room == rm_Paradise && global.podspawn == false && global.questphase == 2 {
+} else if room == rm_Paradise && !global.podspawn && global.questphase == 2 {
     instance_create(x, y, obj_gem);
 } else if room == rm_sandbox_worldmap {
     instance_create(x, y, obj_sandbox_worldmap);

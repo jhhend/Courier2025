@@ -7,7 +7,7 @@ if keyboard_check_pressed(ord("W")) && placement > 0 {
 
 if global.thiefspawn {
     text[0] = "Perform Thief Raid ($" + string(price) + ")";
-} else if global.thiefspawn == false {
+} else if !global.thiefspawn {
     text[0] = "Perform Theif Raid ($0)"
 }
 
@@ -17,7 +17,7 @@ switch (placement) {
         if global.thiefspawn {
             tagline = "Have any information about the thieves' whereabouts?";
             subtag = "Thieves will not spawn the next time a Bask system is visted."
-        } else if global.thiefspawn == false {
+        } else if !global.thiefspawn {
             tagline = "No need to worry about the thieves for now, citizen.";
             subtag = "Ability unavailable: Raid already conducted!"
         }

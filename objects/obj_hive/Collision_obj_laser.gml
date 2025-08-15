@@ -1,5 +1,5 @@
 if hp <= 0 {
-    if hasspawned == false {
+    if !hasspawned {
         repeat(7) {
             offset = irandom_range(-4, 4);
             instance_create(x+offset, y+offset, obj_alien);

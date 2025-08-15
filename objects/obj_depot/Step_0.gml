@@ -1,5 +1,5 @@
 //update button text
-if global.ticket == false {
+if !global.ticket {
     text[1] = "Purchase Ticket ($" + string(price) + ")";
 } else {
     text[1] = "PURCHASED";
@@ -22,7 +22,7 @@ if keyboard_check_pressed(vk_enter) {
             }
             break;
         case 1: //purchase ticket
-            if (global.savings >= price && global.ticket == false) {
+            if (global.savings >= price && !global.ticket) {
                 play_sound(snd_money, 1, false);
                 global.ticket = true;
                 global.savings -= price;

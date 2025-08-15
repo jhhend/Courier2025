@@ -22,7 +22,7 @@ if keyboard_check_pressed(vk_enter) {
             break;
         case 1: //music
             global.music = !global.music;
-            if audio_is_playing(mus_mainmenu) && global.music == false {
+            if audio_is_playing(mus_mainmenu) && !global.music {
                 audio_stop_sound(mus_mainmenu);
             } else if !audio_is_playing(mus_mainmenu) && global.music {
                 play_music(mus_mainmenu, 1, true);

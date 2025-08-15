@@ -13,7 +13,7 @@ if global.faction != ALIEN {
 text[2] = "Back"
 
 placement = 0;
-if global.calm == false {
+if !global.calm {
     tagline = "The Queen appears to be appeased."
 } else {
     tagline = "The Queen seems restless.";

@@ -5,7 +5,7 @@ if keyboard_check_pressed(ord("W")) && placement > 0 {
     placement += 1;
 }
 
-if global.blessing == false {
+if !global.blessing {
     text[0] = "Recieve Blessing ($" + string(price) + ")";
 } else if global.blessing {
     text[0] = "Recieve Blessing ($0)";
@@ -17,7 +17,7 @@ switch (placement) {
         if global.blessing {
             tagline = "You have been blessed, my child.";
             subtag = "Ability unavailable: Blessing already recieved!"
-        } else if global.blessing == false {
+        } else if !global.blessing {
             tagline = "Have you come to recieve my blessing, child?";
             subtag = "Boosts the value of new cargo temporarily."
         }
@@ -26,7 +26,7 @@ switch (placement) {
         if global.faction != -1 && global.faction != CULT {
             tagline = "We do not do deals with outsiders.";
             subtag = "Unable to join when part of another faction."
-        } else if global.betray == false {
+        } else if !global.betray {
             tagline = "You are not worthy.";
             subtag = "Opposing faction has not been betrayed."
         } else if global.betray && global.faction == -1 {
@@ -47,7 +47,7 @@ switch (placement) {
 if keyboard_check_pressed(vk_enter) {
     switch (placement) {
         case 0: //perform raid
-            if global.blessing == false && price <= global.money{
+            if !global.blessing && price <= global.money {
                 play_sound(snd_money, 1, false);
                 global.blessing = true
                 global.money -= price;

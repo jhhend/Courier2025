@@ -1,5 +1,5 @@
 function toggle_pause() {
-	if (pause == false) {
+	if (!pause) {
 	    instance_deactivate_all(true);
 	    pause = true;
 	} else if (pause) {
