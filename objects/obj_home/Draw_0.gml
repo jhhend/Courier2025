@@ -11,7 +11,7 @@ draw_text(room_width/2, room_height/5, string_hash_to_newline("HOME"));
 
 //draw selection options
 draw_set_font(fnt_standard);
-for (var i = 0; i < array_length_1d(text); i++) {
+for (var i = 0; i < array_length(text); i++) {
     if placement == i {
         draw_text(room_width/2, (room_height/2)+(i*32), string_hash_to_newline(">" + text[i] + "<"));
     } else {

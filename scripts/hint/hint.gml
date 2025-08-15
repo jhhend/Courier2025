@@ -16,7 +16,7 @@ function hint() {
 	confiscated through fines or robberies.";
 	h[7] =  @"Joining a faction will make specialty cargo visible.
 	Specialty cargo is one of the easiest ways to gain money fast.";
-	var selection = irandom_range(0, array_length_1d(h) - 1);
+	var selection = irandom_range(0, array_length(h) - 1);
 
 	return h[selection];
 

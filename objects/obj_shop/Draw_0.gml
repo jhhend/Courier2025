@@ -18,7 +18,7 @@ if text[placement] != "PURCHASED" && placement != 9 {
 }
 
 //draw selection options
-for (var i = 0; i < array_length_1d(text); i++) {
+for (var i = 0; i < array_length(text); i++) {
     if placement == i{
         draw_text(72, (room_height/5)+63+(i*32), string_hash_to_newline(">" + text[i] + "<"));
     } else {
