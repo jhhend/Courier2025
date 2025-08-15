@@ -7,14 +7,14 @@ if keyboard_check_pressed(ord("W")) && placement > 0 {
 
 if global.blessing == false {
     text[0] = "Recieve Blessing ($" + string(price) + ")";
-} else if global.blessing == true {
+} else if global.blessing {
     text[0] = "Recieve Blessing ($0)";
 }
 
 //set tagline
 switch (placement) {
     case 0: //set blessing
-        if global.blessing == true {
+        if global.blessing {
             tagline = "You have been blessed, my child.";
             subtag = "Ability unavailable: Blessing already recieved!"
         } else if global.blessing == false {
@@ -29,7 +29,7 @@ switch (placement) {
         } else if global.betray == false {
             tagline = "You are not worthy.";
             subtag = "Opposing faction has not been betrayed."
-        } else if global.betray == true && global.faction == -1 {
+        } else if global.betray && global.faction == -1 {
             tagline = "You have proven yourself worthy of salvation.";
             subtag = "Able to join!";
         } else if global.faction == CULT {
@@ -54,7 +54,7 @@ if keyboard_check_pressed(vk_enter) {
             }
             break;
         case 1: //inquire
-            if global.betray == true && global.faction == -1 {
+            if global.betray && global.faction == -1 {
                 destroy_self();
                 instance_create(x, y, obj_cult_offer);
             } else if global.faction == CULT {

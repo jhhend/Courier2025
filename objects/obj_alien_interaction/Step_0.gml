@@ -7,7 +7,7 @@ if keyboard_check_pressed(ord("W")) && placement > 0 {
 
 if global.calm == false {
     text[0] = "Calm Hive ($" + string(price) + ")";
-} else if global.calm == true {
+} else if global.calm {
     text[0] = "Calm Hive ($0)";
 }
 

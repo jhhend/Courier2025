@@ -13,7 +13,7 @@ if keyboard_check_pressed(vk_escape) {
     }
 }
 
-if pause == true {
+if pause {
     if keyboard_check_pressed(ord("W")) && placement > 0 {
         placement -= 1;
     } else if keyboard_check_pressed(ord("S")) && placement < (array_length(text) - 1) {

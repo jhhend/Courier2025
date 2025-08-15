@@ -11,9 +11,9 @@ if keyboard_check_pressed(vk_f12) {
 }
 
 //rolling
-if rollleft && canroll == true {
+if rollleft && canroll {
     state = player_roll(RLEFT);
-} else if rollright && canroll == true {
+} else if rollright && canroll {
     state = player_roll(RRIGHT);
 }
 

@@ -24,13 +24,13 @@ if keyboard_check_pressed(vk_enter) {
             global.music = !global.music;
             if audio_is_playing(mus_mainmenu) && global.music == false {
                 audio_stop_sound(mus_mainmenu);
-            } else if !audio_is_playing(mus_mainmenu) && global.music == true {
+            } else if !audio_is_playing(mus_mainmenu) && global.music {
                 play_music(mus_mainmenu, 1, true);
             }
             play_sound(snd_select, 1, false);
             break;
         case 2: //fullscreen
-            if window_get_fullscreen() == true {
+            if window_get_fullscreen() {
                 window_set_fullscreen(false);
                 global.fullscreen = false;
             } else {
@@ -62,10 +62,10 @@ if keyboard_check_pressed(vk_enter) {
 }
 
 //update text
-if global.sound == true {text[0] = "Sound: On"} else {text[0] = "Sound: Off"}
-if global.music == true {text[1] = "Music: On"} else {text[1] = "Music: Off"};
-if window_get_fullscreen() == true {text[2] = "Fullscreen: On"} else {text[2] = "Fullscreen: Off"};
-if global.showfps == true {text[3] = "FPS Counter: On"} else {text[3] = "FPS Counter: Off"};
+if global.sound {text[0] = "Sound: On"} else {text[0] = "Sound: Off"}
+if global.music {text[1] = "Music: On"} else {text[1] = "Music: Off"};
+if window_get_fullscreen() {text[2] = "Fullscreen: On"} else {text[2] = "Fullscreen: Off"};
+if global.showfps {text[3] = "FPS Counter: On"} else {text[3] = "FPS Counter: Off"};
 text[4] = "Delete Save";
 text[5] = "Back";
 

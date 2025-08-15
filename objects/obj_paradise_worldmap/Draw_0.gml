@@ -6,7 +6,7 @@ for (var i = 0; i <= amount; i++) {
     draw_sprite_ext(spr_star, 0, xcoord[i], ycoord[i], scale[i], scale[i], angle[i], color[i], alpha[i]);
 }
 
-if draw == true {
+if draw {
     draw_set_font(fnt_hud);
     draw_set_colour(c_white);
     draw_set_halign(fa_center);

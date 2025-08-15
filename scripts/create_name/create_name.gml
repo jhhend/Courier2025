@@ -14,7 +14,7 @@ function create_name() {
 	}
 
 	//determine letters
-	if global.blessing == true {
+	if global.blessing {
 	    name = choose("A", "B", "C", "D") + string(clamp(price*3, 1, 999)) + choose("W", "X", "Y", "Z");
 	} else {
 	    name = choose("A", "B", "C", "D") + string(price) + choose("W", "X", "Y", "Z");

@@ -14,7 +14,7 @@ function load_options() {
 	    global.fullscreen = real(base64_decode(l_fullscreen));
 	    global.showfps = real(base64_decode(l_showfps));
     
-	    if global.fullscreen == true {
+	    if global.fullscreen {
 	        window_set_fullscreen(true);
 	    } else {
 	        window_set_fullscreen(false);

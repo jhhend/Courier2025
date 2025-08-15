@@ -120,7 +120,7 @@ if o != -1 && instance_exists(o){
     draw_sprite_ext(spr_arrow_large, 0, x, y, 1, 1, point_direction(x, y, o.x, o.y), c, 1);
 }
 
-if drawability == true {
+if drawability {
     var c;
     switch (global.faction) {
         case POLICE: c = c_police; break;
@@ -183,7 +183,7 @@ if (global.questphase == 3) {
     draw_text(__view_get( e__VW.XView, 0 )+(__view_get( e__VW.WView, 0 )/2), __view_get( e__VW.YView, 0 )+(__view_get( e__VW.WView, 0 )-32), string_hash_to_newline("◆"))
 }
 
-if (global.showfps == true) {
+if (global.showfps) {
     draw_set_halign(fa_right);
     draw_set_valign(fa_top);
     draw_set_colour(c_yellow);
@@ -191,7 +191,7 @@ if (global.showfps == true) {
     draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-8, __view_get( e__VW.YView, 0 )+8, string_hash_to_newline(string(fps)));
 }
 
-if drawegg == true {
+if drawegg {
     draw_sprite_ext(spr_snoot, 0, x, y, 3, 3, image_angle, c_white, .5*sin(eggalpha)+.5);
 }
 

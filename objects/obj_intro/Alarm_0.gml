@@ -1,4 +1,4 @@
-if draw == true {
+if draw {
     draw = false;
 } else if draw == false {
     draw = true;

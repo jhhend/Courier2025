@@ -1,5 +1,5 @@
 price = 250;
-if global.calm == true {
+if global.calm {
     text[0] = "Calm Hive ($0)";
 } else {
     text[0] = "Calm Hive ($" + string(price) + ")";

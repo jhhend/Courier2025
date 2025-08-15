@@ -47,7 +47,7 @@ if !instance_exists(obj_view) {
 }
 
 //reset hive calm rating
-if room == rm_worldmap && global.calm == true {
+if room == rm_worldmap && global.calm {
     global.calm = false;
 }
 

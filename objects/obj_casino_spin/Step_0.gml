@@ -5,7 +5,7 @@ if angleoffset > .01 {
 } else {
     angleoffset = 0;
     drawresult = true;
-    if playsound == true {
+    if playsound {
         playsound = false;
         play_sound(sound, 1, false);
     }

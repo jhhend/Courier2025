@@ -17,7 +17,7 @@ if keyboard_check_pressed(vk_enter) {
     switch (placement) {
         case 0:
             play_sound(snd_select, 1, false);
-            if global.ticket == true {
+            if global.ticket {
                 room_goto(rm_paradise_transport);
             }
             break;

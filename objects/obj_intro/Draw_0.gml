@@ -21,7 +21,7 @@ draw_set_colour(merge_colour(c_yellow, c_olive, .5));
 draw_text(x, y, string_hash_to_newline(@"########
                                           GEMKEEPER 
 ###"))
-if (cont == 1 && draw == true) {
+if (cont == 1 && draw) {
     draw_set_colour(c_dkgray);
     draw_set_halign(fa_right);
     draw_set_valign(fa_bottom);

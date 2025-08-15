@@ -282,16 +282,16 @@ if instance_exists(obf) && collision_circle(obf.x, obf.y, obf.radius, self, true
 }
 
 //go to casino
-if instance_exists(obj_casino) && collision_circle(obj_casino.x, obj_casino.y, obj_casino.radius, self, true, false) && obj_casino.canenter == true && keyboard_check(vk_enter) {
+if instance_exists(obj_casino) && collision_circle(obj_casino.x, obj_casino.y, obj_casino.radius, self, true, false) && obj_casino.canenter && keyboard_check(vk_enter) {
     global.xprev = x;
     global.yprev = y;
     room_goto(rm_casino);
 }
 
 //rolling
-if rollleft && canroll == true {
+if rollleft && canroll {
     state = player_roll(RLEFT);
-} else if rollright && canroll == true {
+} else if rollright && canroll {
     state = player_roll(RRIGHT);
 }
 

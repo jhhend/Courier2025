@@ -1,6 +1,6 @@
 if (room != rm_worldmap && room != rm_paradise_worldmap && room != rm_Paradise && room != rm_sandbox_worldmap && room != rm_Sandbox) {
     instance_create(x, y, obj_dropoff);
-} else if room == rm_Paradise && global.podspawn == true {
+} else if room == rm_Paradise && global.podspawn {
     instance_create(x, y, obj_pod);
 } else if room == rm_Paradise && global.podspawn == false && global.questphase == 2 {
     instance_create(x, y, obj_gem);
@@ -8,7 +8,7 @@ if (room != rm_worldmap && room != rm_paradise_worldmap && room != rm_Paradise &
     instance_create(x, y, obj_sandbox_worldmap);
 }
 
-if (room == rm_Sandbox && global.endspawn == true) {
+if (room == rm_Sandbox && global.endspawn) {
     repeat(50) {
         var ax, ay;
             ax = irandom_range(0, room_width);
