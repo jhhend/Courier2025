@@ -11,7 +11,7 @@ draw_text(room_width/2, room_height/5, string_hash_to_newline("LASER CRYSTALS"))
 
 //draw selection options
 draw_set_font(fnt_standard);
-for (var i = 0; i < array_length_1d(text); i++) {
+for (var i = 0; i < array_length(text); i++) {
     if placement == i{
         draw_text(72, (room_height/5)+63+(i*32), string_hash_to_newline(">" + text[i] + "<"));
     } else {

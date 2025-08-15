@@ -10,7 +10,7 @@ draw_set_valign(fa_middle);
 draw_text(room_width/2, room_height/5, string_hash_to_newline("THE QUEEN"));
 
 draw_set_font(fnt_hud);
-if placement != array_length_1d(text) - 1 {
+if placement != array_length(text) - 1 {
     draw_text(room_width/2, (room_height/5)+32, string_hash_to_newline(tagline))
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
@@ -18,7 +18,7 @@ if placement != array_length_1d(text) - 1 {
 }
 
 draw_set_font(fnt_standard);
-for (var i = 0; i < array_length_1d(text); i++) {
+for (var i = 0; i < array_length(text); i++) {
     if placement == i {
         draw_text(room_width/2, (room_height/2)+(i*32), string_hash_to_newline(">" + text[i] + "<"));
     } else {

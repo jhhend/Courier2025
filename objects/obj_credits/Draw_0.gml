@@ -4,7 +4,7 @@ for (var j = 0; j <= staramount; j++) {
 
 var s = 5;
 offset = 0;
-for (var i = 0; i < array_length_1d(image); i++) {
+for (var i = 0; i < array_length(image); i++) {
     switch i {
         case 0:
             index = 0;

@@ -9,7 +9,7 @@ for (var i = 0; i <= staramount; i++) {
 // up/down movement
 if keyboard_check_pressed(ord("W")) && placement > 0 {
     placement -= 1;
-} else if keyboard_check_pressed(ord("S")) && placement < (array_length_1d(text) - 1) {
+} else if keyboard_check_pressed(ord("S")) && placement < (array_length(text) - 1) {
     placement += 1;
 }
 
@@ -17,11 +17,11 @@ if keyboard_check_pressed(ord("W")) && placement > 0 {
 if keyboard_check_pressed(vk_enter) {
     switch (placement) {
         case 0: //sound
-            global.sound = true_false(global.sound);
+            global.sound = !global.sound;
             play_sound(snd_select, 1, false);
             break;
         case 1: //music
-            global.music = true_false(global.music);
+            global.music = !global.music;
             if audio_is_playing(mus_mainmenu) && global.music == false {
                 audio_stop_sound(mus_mainmenu);
             } else if !audio_is_playing(mus_mainmenu) && global.music == true {
@@ -40,7 +40,7 @@ if keyboard_check_pressed(vk_enter) {
             play_sound(snd_select, 1, false);
             break;
         case 3: //fps counter
-            global.showfps = true_false(global.showfps);
+            global.showfps = !global.showfps;;
             play_sound(snd_select, 1, false);
             break;
         case 4: //delete save

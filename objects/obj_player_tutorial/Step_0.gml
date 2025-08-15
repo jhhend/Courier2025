@@ -1,6 +1,8 @@
 //move and shoot functions
 player_input();
-script_execute(state);
+if (is_method(state)) {
+	state();
+}
 player_shoot_tutorial();
 
 //screenshot

@@ -4,7 +4,7 @@ function draw_slots() {
 	    dp = 48+16;
 	    s = "";
 	    c = c_white;
-	for (var i = 0; i < array_length_1d(global.hull); i++) {
+	for (var i = 0; i < array_length(global.hull); i++) {
 	    if global.hull[i] != " " {
 	    switch global.cargostat[i] {
 	        case "Legal":
