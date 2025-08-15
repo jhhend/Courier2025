@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":0.628322,
   "name":"snd_ascend0",
   "parent":{
     "name":"Sounds",

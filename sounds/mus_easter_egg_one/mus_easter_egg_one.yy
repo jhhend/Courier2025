@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":16.021769,
   "name":"mus_easter_egg_one",
   "parent":{
     "name":"Sounds",
