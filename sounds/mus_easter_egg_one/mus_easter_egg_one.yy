@@ -12,8 +12,8 @@
   "duration":16.021769,
   "name":"mus_easter_egg_one",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Music.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

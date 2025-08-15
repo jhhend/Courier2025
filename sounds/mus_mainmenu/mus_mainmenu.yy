@@ -12,8 +12,8 @@
   "duration":38.405804,
   "name":"mus_mainmenu",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Music.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

@@ -12,8 +12,8 @@
   "duration":23.962994,
   "name":"mus_textcrawl",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Music.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

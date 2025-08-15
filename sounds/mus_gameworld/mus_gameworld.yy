@@ -12,8 +12,8 @@
   "duration":42.678276,
   "name":"mus_gameworld",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Music.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

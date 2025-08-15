@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"Civillian",
+    "path":"folders/Sprites/Civillian.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
