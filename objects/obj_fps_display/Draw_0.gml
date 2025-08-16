@@ -1,4 +1,4 @@
-if (global.showfps == true && !instance_exists(obj_player)) {
+if (global.showfps && !instance_exists(obj_player)) {
     draw_set_halign(fa_right);
     draw_set_valign(fa_top);
     draw_set_colour(c_yellow);

@@ -24,7 +24,7 @@ draw_text(room_width/2, room_height-18, string_hash_to_newline("Currency: $" + s
 draw_text(room_width/2, room_height-36, string_hash_to_newline("Savings: $" + string(global.savings)));
 
 //draw save
-if drawsave == true {
+if drawsave {
     draw_set_colour(c_white);
     draw_set_font(fnt_hud);
     draw_set_colour(c_lime);

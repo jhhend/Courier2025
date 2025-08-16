@@ -20,7 +20,7 @@ if rectalpha < .01 {
     rectalpha = 0;
 }
 
-if cansubtract == true {
+if cansubtract {
     if textalpha > .01 {
         textalpha -= .02;
     } else {

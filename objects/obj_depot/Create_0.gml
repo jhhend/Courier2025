@@ -1,6 +1,6 @@
 price = PRICE;
 text[0] = "Travel to Paradise";
-if global.ticket == false {
+if !global.ticket {
     text[1] = "Purchase Ticket ($" + string(price) + ")";
 } else {
     text[1] = "PURCHASED";

@@ -5,19 +5,19 @@ if keyboard_check_pressed(ord("W")) && placement > 0 {
     placement += 1;
 }
 
-if global.thiefspawn == true {
+if global.thiefspawn {
     text[0] = "Perform Thief Raid ($" + string(price) + ")";
-} else if global.thiefspawn == false {
+} else if !global.thiefspawn {
     text[0] = "Perform Theif Raid ($0)"
 }
 
 //set tagline
 switch (placement) {
     case 0: //set thiefspawn
-        if global.thiefspawn == true {
+        if global.thiefspawn {
             tagline = "Have any information about the thieves' whereabouts?";
             subtag = "Thieves will not spawn the next time a Bask system is visted."
-        } else if global.thiefspawn == false {
+        } else if !global.thiefspawn {
             tagline = "No need to worry about the thieves for now, citizen.";
             subtag = "Ability unavailable: Raid already conducted!"
         }
@@ -50,7 +50,7 @@ switch (placement) {
 if keyboard_check_pressed(vk_enter) {
     switch (placement) {
         case 0: //perform raid
-            if global.thiefspawn == true && global.money >= price {
+            if global.thiefspawn && global.money >= price {
                 play_sound(snd_money, 1, false);
                 global.money -= price;
                 global.thiefspawn = false;

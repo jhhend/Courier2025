@@ -1,6 +1,6 @@
-if draw == true {
+if draw {
     draw = false;
-} else if draw == false {
+} else if !draw {
     draw = true;
 }
 

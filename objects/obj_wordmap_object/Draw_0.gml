@@ -38,7 +38,7 @@ draw_set_color(c_white);
 
 // draw the name if the player is within range
 //draw_circle(x, y, dist, true);
-if draw == true {
+if draw {
     draw_set_font(fnt_hud);
     draw_set_halign(fa_center);
     draw_set_halign(fa_middle);

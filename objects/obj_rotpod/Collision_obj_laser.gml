@@ -1,4 +1,4 @@
-if canattack == true {
+if canattack {
     switch (hp) {
         case 2:
             var i, e;

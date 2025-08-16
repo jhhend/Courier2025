@@ -8,7 +8,27 @@ shake = 0;
 drawegg = false;
 eggalpha = 0
 
-state = player_move;
+move = function() {
+	var turn = 3;
+	if left {
+	    image_angle += turn;
+	} else if right {
+	    image_angle -= turn;
+	}
+
+	if forward {
+	    speed = 4;
+	    direction = image_angle;
+	} else { 
+	    speed*=.9
+	    if speed < 1 {
+	        speed = 0;
+	    }
+	}
+}
+
+
+state = move;
 
 //determine ability cooldown
 player_cooldown();
@@ -27,7 +47,7 @@ if !instance_exists(obj_view) {
 }
 
 //reset hive calm rating
-if room == rm_worldmap && global.calm == true {
+if room == rm_worldmap && global.calm {
     global.calm = false;
 }
 

@@ -32,7 +32,7 @@ instance_create(rx, ry, obj_criminal);
 var obj, obs, num;
 switch (room) {
     case rm_Bask_Minor:
-        if global.thiefspawn == true {
+        if global.thiefspawn {
             obj = obj_thief;
         } else {
             obj = -1;
@@ -43,7 +43,7 @@ switch (room) {
         num = 10;
         break;
     case rm_Bask_Major:
-        if global.thiefspawn == true {
+        if global.thiefspawn {
             obj = obj_thief;
         } else {
             obj = -1;

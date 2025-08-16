@@ -9,7 +9,7 @@ function player_ability() {
 	    switch (global.faction) {
 	        case POLICE:
 	            var c = instance_nearest(x, y, obj_civillian);
-	            if collision_circle(x, y, radius, c, true, true) && c.illegal == true {
+	            if collision_circle(x, y, radius, c, true, true) && c.illegal {
 	                global.money += c.price;
 	                var e = instance_create(c.x, c.y, obj_abilityindicator);
 	                with (e) {
@@ -19,7 +19,7 @@ function player_ability() {
 	                }
 	                instance_destroy(c);
 	                obj_data.alarm[2] = cooldown;
-	            } else if collision_circle(x, y, radius, c, true, true) && c.illegal == false {
+	            } else if collision_circle(x, y, radius, c, true, true) && !c.illegal {
 	                obj_data.alarm[2] = cooldown;
 	                var e = instance_create(c.x, c.y, obj_abilityindicator);
 	                with (e) {
@@ -44,7 +44,7 @@ function player_ability() {
 	        case THIEF:
 	            var c = instance_nearest(x, y, obj_civillian);
 	            if collision_circle(x, y, radius, c, true, true) {
-	                if c.stolen == false {
+	                if !c.stolen {
 	                    global.money += irandom_range(20, 50);
 	                    var e = instance_create(c.x, c.y, obj_abilityindicator);
 	                    with (e) {
@@ -53,7 +53,7 @@ function player_ability() {
 	                        creator = c;
 	                    }
 	                    obj_data.alarm[2] = cooldown;
-	                } else if c.stolen == true {
+	                } else if c.stolen {
 	                    var e = instance_create(c.x, c.y, obj_abilityindicator);
 	                    with (e) {
 	                        text = "EMPTY";
@@ -74,7 +74,7 @@ function player_ability() {
 	            break;
 	        case CULT:
 	            var c = instance_nearest(x, y, obj_civillian);
-	            if collision_circle(x, y, radius, c, true, true) && c.cult == false {
+	            if collision_circle(x, y, radius, c, true, true) && !c.cult {
 	                global.cultpower++;
 	                with (c) {
 	                    cult = true;

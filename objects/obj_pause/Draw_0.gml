@@ -3,7 +3,7 @@ var midx, midy;
     midy = __view_get( e__VW.YView, 0 ) + (__view_get( e__VW.HView, 0 )/5)+63;
     mid5 = __view_get( e__VW.YView, 0 ) + (__view_get( e__VW.HView, 0 )/5);
 
-if (pause == true) {
+if (pause) {
     for (var j = 0; j <= staramount; j++) {
         draw_sprite_ext(spr_star, 0, bkxcoord[j], bkycoord[j], bkscale[j], bkscale[j], bkangle[j], bkcolor[j], bkalpha[j]);
     }

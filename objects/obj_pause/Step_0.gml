@@ -1,5 +1,5 @@
 if keyboard_check_pressed(vk_escape) {
-    if pause == false {
+    if !pause {
         instance_deactivate_all(true);
         for (var j = 0; j <= staramount; j++) {
             bkxcoord[j] = random_range(__view_get( e__VW.XView, 0 ), __view_get( e__VW.XView, 0 ) + __view_get( e__VW.WView, 0 ));
@@ -13,7 +13,7 @@ if keyboard_check_pressed(vk_escape) {
     }
 }
 
-if pause == true {
+if pause {
     if keyboard_check_pressed(ord("W")) && placement > 0 {
         placement -= 1;
     } else if keyboard_check_pressed(ord("S")) && placement < (array_length(text) - 1) {

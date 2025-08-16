@@ -5,9 +5,9 @@ if keyboard_check_pressed(ord("W")) && placement > 0 {
     placement += 1;
 }
 
-if global.calm == false {
+if !global.calm {
     text[0] = "Calm Hive ($" + string(price) + ")";
-} else if global.calm == true {
+} else if global.calm {
     text[0] = "Calm Hive ($0)";
 }
 
@@ -50,7 +50,7 @@ switch (placement) {
 if keyboard_check_pressed(vk_enter) {
     switch (placement) {
         case 0: //calm hive
-            if global.calm == false && global.money >= price {
+            if !global.calm && global.money >= price {
                 play_sound(snd_money, 1, false);
                 global.money -= price;
                 global.calm = true;

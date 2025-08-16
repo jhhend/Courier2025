@@ -17,7 +17,7 @@ for (var i = 0; i < array_length(text); i++) {
     }
 }
 
-if drawtext == true {
+if drawtext {
         draw_set_colour(c_white);
     draw_set_font(fnt_hud);
     draw_set_colour(c_red);

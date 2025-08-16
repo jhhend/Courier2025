@@ -16,7 +16,7 @@ function easter_egg_one() {
 	    }
 	}
 
-	if drawegg == true && !audio_is_playing(mus_easter_egg_one) {
+	if drawegg && !audio_is_playing(mus_easter_egg_one) {
 	    if audio_is_playing(mus_gameworld) {
 	        audio_pause_sound(mus_gameworld);
 	    }

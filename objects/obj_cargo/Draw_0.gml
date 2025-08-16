@@ -1,6 +1,6 @@
 draw_self();
 
-if draw == true {
+if draw {
     var col;
     switch(status) {
         case "Legal": col = c_aqua; break;

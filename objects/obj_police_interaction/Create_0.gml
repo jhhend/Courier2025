@@ -1,7 +1,7 @@
 price = 750;
-if global.thiefspawn == false {
+if !global.thiefspawn {
     text[0] = "Perform Theif Raid ($0)";    
-} else if (global.thiefspawn == true) {
+} else if (global.thiefspawn) {
     text[0] = "Perform Thief Raid ($" + string(price) + ")";
 }
 
@@ -14,9 +14,9 @@ text[2] = "Back"
 
 placement = 0;
 
-if global.thiefspawn == false {
+if !global.thiefspawn {
     tagline = "No need to worry about the thieves for now, citizen.";
-} else if global.thiefspawn == true {
+} else if global.thiefspawn {
     tagline = "Have any information about the thieves' whereabouts?";
 }
 
