@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"macros",
+  "%Name":"Map",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"macros",
+  "name":"Map",
   "parent":{
-    "name":"Courier082025",
-    "path":"Courier082025.yyp",
+    "name":"DataStructures",
+    "path":"folders/DataStructures.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

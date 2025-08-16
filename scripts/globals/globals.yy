@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"macros",
+  "%Name":"globals",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"macros",
+  "name":"globals",
   "parent":{
     "name":"Courier082025",
     "path":"Courier082025.yyp",

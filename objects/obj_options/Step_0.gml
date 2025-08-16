@@ -17,30 +17,26 @@ if keyboard_check_pressed(ord("W")) && placement > 0 {
 if keyboard_check_pressed(vk_enter) {
     switch (placement) {
         case 0: //sound
-            global.sound = !global.sound;
+			global.settings.toggle("sound");
             play_sound(snd_select, 1, false);
             break;
         case 1: //music
-            global.music = !global.music;
-            if audio_is_playing(mus_mainmenu) && !global.music {
+			global.settings.toggle("music");
+						
+            if audio_is_playing(mus_mainmenu) && !global.settings.get("music") {
                 audio_stop_sound(mus_mainmenu);
-            } else if !audio_is_playing(mus_mainmenu) && global.music {
+            } else if !audio_is_playing(mus_mainmenu) && global.settings.get("music") {
                 play_music(mus_mainmenu, 1, true);
             }
             play_sound(snd_select, 1, false);
             break;
         case 2: //fullscreen
-            if window_get_fullscreen() {
-                window_set_fullscreen(false);
-                global.fullscreen = false;
-            } else {
-                window_set_fullscreen(true);
-                global.fullscreen = true;
-            }
+			global.settings.toggle("fullscreen");
+			window_set_fullscreen(global.settings.get("fullscreen"));
             play_sound(snd_select, 1, false);
             break;
         case 3: //fps counter
-            global.showfps = !global.showfps;;
+			global.settings.toggle("showFps");
             play_sound(snd_select, 1, false);
             break;
         case 4: //delete save
@@ -62,10 +58,10 @@ if keyboard_check_pressed(vk_enter) {
 }
 
 //update text
-if global.sound {text[0] = "Sound: On"} else {text[0] = "Sound: Off"}
-if global.music {text[1] = "Music: On"} else {text[1] = "Music: Off"};
-if window_get_fullscreen() {text[2] = "Fullscreen: On"} else {text[2] = "Fullscreen: Off"};
-if global.showfps {text[3] = "FPS Counter: On"} else {text[3] = "FPS Counter: Off"};
+text[0] = $"Sound: {global.settings.get("sound") ? "On" : "Off"}";
+text[1] = $"Music: {global.settings.get("music") ? "On" : "Off"}";
+text[2] = $"Fullscreen: {global.settings.get("fullscreen") ? "On" : "Off"}";
+text[3] = $"FPS Counter: {global.settings.get("showFps") ? "On" : "Off"}";
 text[4] = "Delete Save";
 text[5] = "Back";
 

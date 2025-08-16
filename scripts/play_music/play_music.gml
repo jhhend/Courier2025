@@ -1,6 +1,6 @@
 
 function play_music(sound, priority, loop) {
-	if global.music {
+	if (global.settings.get("music")) {
 	    audio_play_sound(sound, priority, loop);
 	}
 }

@@ -49,12 +49,6 @@ global.endspawn = true; //whether asteroids will spawn or not
 global.endentity = noone; //entity that will spawn
 global.endentityamount = SOME; //amount of entities that will spawn
 
-//options
-global.sound = true;
-global.music = true;
-global.fullscreen = false;
-global.showfps = false;
-
 //create pause
 instance_create(0, 0, obj_pause);
 
