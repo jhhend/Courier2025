@@ -43,9 +43,9 @@ switch (placement) {
 if keyboard_check_pressed(vk_enter) {
     switch (placement) {
         case 0: //remove charge
-            if global.murder > 0 && global.money >= price {
+            if global.murder > 0 && global.state.money >= price {
                 play_sound(snd_money, 1, false);
-                global.money -= price;
+                global.state.money -= price;
                 global.murder = 0;
             }
             break;

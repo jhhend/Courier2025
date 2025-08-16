@@ -50,9 +50,9 @@ switch (placement) {
 if keyboard_check_pressed(vk_enter) {
     switch (placement) {
         case 0: //calm hive
-            if !global.calm && global.money >= price {
+            if !global.calm && global.state.money >= price {
                 play_sound(snd_money, 1, false);
-                global.money -= price;
+                global.state.money -= price;
                 global.calm = true;
             }
             break;

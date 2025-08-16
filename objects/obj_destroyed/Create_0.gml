@@ -9,7 +9,7 @@ for (var j = 0; j <= staramount; j++) {
 }
 
 global.prevroom = rm_destroyed;
-global.money -= global.fine;
+global.state.money -= global.fine;
 
 canleave = false;
 

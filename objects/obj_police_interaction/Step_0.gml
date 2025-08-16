@@ -50,9 +50,9 @@ switch (placement) {
 if keyboard_check_pressed(vk_enter) {
     switch (placement) {
         case 0: //perform raid
-            if global.thiefspawn && global.money >= price {
+            if global.thiefspawn && global.state.money >= price {
                 play_sound(snd_money, 1, false);
-                global.money -= price;
+                global.state.money -= price;
                 global.thiefspawn = false;
             }
             break;

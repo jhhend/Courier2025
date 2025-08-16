@@ -47,10 +47,10 @@ switch (placement) {
 if keyboard_check_pressed(vk_enter) {
     switch (placement) {
         case 0: //perform raid
-            if !global.blessing && price <= global.money {
+            if !global.blessing && price <= global.state.money {
                 play_sound(snd_money, 1, false);
                 global.blessing = true
-                global.money -= price;
+                global.state.money -= price;
             }
             break;
         case 1: //inquire

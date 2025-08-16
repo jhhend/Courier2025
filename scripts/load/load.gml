@@ -50,7 +50,7 @@ function load() {
     
 	    //global.blessing = base64_decode(l_blessing);
     
-	    global.money = real(base64_decode(l_money));
+	    global.state.money = real(base64_decode(l_money));
 	    global.savings = real(base64_decode(l_savings));
 	    global.state.ticket = real(base64_decode(l_ticket));
 	    global.hud = real(base64_decode(l_hud));

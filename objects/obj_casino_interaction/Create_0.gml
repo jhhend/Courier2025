@@ -1,16 +1,16 @@
 minbet = 3500;
 
-if global.money < minbet {
+if global.state.money < minbet {
     for (var i = 0; i <= 5; i++) {
         text[i] = "$" + string(minbet) + " REQUIRED FOR BUY IN";
     }
     text[5] = "Back";
 } else {
-    text[0] = "Spin with 1/16 Bet + ($" + string(floor(global.money/16))+")";
-    text[1] = "Spin with 1/8 Bet + ($" + string(floor(global.money/8))+")";
-    text[2] = "Spin with 1/4 Bet + ($" + string(floor(global.money/4))+")";
-    text[3] = "Spin with 1/2 Bet + ($" + string(floor(global.money/2))+")";
-    text[4] = "Spin with ALL IN + ($" + string(global.money)+")";
+    text[0] = "Spin with 1/16 Bet + ($" + string(floor(global.state.money/16))+")";
+    text[1] = "Spin with 1/8 Bet + ($" + string(floor(global.state.money/8))+")";
+    text[2] = "Spin with 1/4 Bet + ($" + string(floor(global.state.money/4))+")";
+    text[3] = "Spin with 1/2 Bet + ($" + string(floor(global.state.money/2))+")";
+    text[4] = "Spin with ALL IN + ($" + string(global.state.money)+")";
     text[5] = "Back";
 }
 

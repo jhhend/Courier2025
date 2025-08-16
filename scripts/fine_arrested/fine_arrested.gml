@@ -29,9 +29,9 @@ function fine_arrested() {
 	}
 
 	//set fine to f or total money if fine is too large
-	if global.money < fine_temp {
-	    global.fine = global.money;
-	} else if global.money >= fine_temp {
+	if global.state.money < fine_temp {
+	    global.fine = global.state.money;
+	} else if global.state.money >= fine_temp {
 	    global.fine = fine_temp;
 	}
 

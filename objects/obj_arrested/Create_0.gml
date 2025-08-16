@@ -12,7 +12,7 @@ hinttext = hint();
 canleave = false;
 
 global.prevroom = rm_arrested;
-global.money -= global.fine;
+global.state.money -= global.fine;
 
 play_sound(snd_bad, 1, false);
 

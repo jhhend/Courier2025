@@ -179,7 +179,7 @@ if instance_exists(obj_dropoff) && collision_circle(obj_dropoff.x, obj_dropoff.y
             break;
         //legal cargo
         } else if ((global.cargodest[i] == remove_prefix(room) || global.cargodest[i] == remove_prefix_underscore(room)) && global.cargostat[i] != "Ilegal" && global.cargostat[i] != "Police" && global.cargostat[i] != "Alien" && global.cargostat[i] != "Thief" && global.cargostat[i] != "Cult") {
-            global.money += global.cargoval[i];
+            global.state.money += global.cargoval[i];
             global.legaltotal++;
             clear_slot(i);
         } 
@@ -190,7 +190,7 @@ if instance_exists(obj_dropoff) && collision_circle(obj_dropoff.x, obj_dropoff.y
 if instance_exists(obj_criminal) && collision_circle(obj_criminal.x, obj_criminal.y, 64, self, true, false) && keyboard_check_pressed(vk_enter) {
     for (var i = 0; i < 3; i++) {
         if ((global.cargodest[i] == remove_prefix(room) || global.cargodest[i] == remove_prefix_underscore(room)) && global.cargostat[i] == "Illegal") {
-            global.money += 2*global.cargoval[i];
+            global.state.money += 2*global.cargoval[i];
             global.illegaltotal++;
             clear_slot(i);
         }  
@@ -231,7 +231,7 @@ if (room != rm_worldmap) {
     if instance_exists(inst) && collision_circle(inst.x, inst.y, inst.radius, self, true, false) && global.faction = title && keyboard_check_pressed(vk_enter) {
         for (var i = 0; i < 3; i++) {
             if ((global.cargodest[i] == remove_prefix(room) || global.cargodest[i] == remove_prefix_underscore(room)) && global.cargostat[i] == string(fact)) {
-                global.money += global.cargoval[i];
+                global.state.money += global.cargoval[i];
                 global.factiontotal++;
                 if global.cargostat[i] == "Cult" {
                     global.cultpower++;

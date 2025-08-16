@@ -22,5 +22,5 @@ for (var i = 0; i < array_length(text); i++) {
     }
 }
 
-draw_text(room_width/2, room_height-16, string_hash_to_newline("Currency: $" + string(global.money)));
+draw_text(room_width/2, room_height-16, string_hash_to_newline("Currency: $" + string(global.state.money)));
 

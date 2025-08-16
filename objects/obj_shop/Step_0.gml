@@ -9,8 +9,8 @@ if keyboard_check_pressed(ord("W")) && placement > 0 {
 if keyboard_check_pressed(vk_enter) {
     switch (placement) {
         case 0: //shields 1
-            if (global.money >= real(price[placement]) && global.shd == 0) {
-                global.money -= real(price[placement]);
+            if (global.state.money >= real(price[placement]) && global.shd == 0) {
+                global.state.money -= real(price[placement]);
                 global.shd = 1;
                 global.maxshields = 1;
                 global.shields = global.maxshields;
@@ -18,8 +18,8 @@ if keyboard_check_pressed(vk_enter) {
             }
             break;
         case 1: //shields 2
-            if (global.money >= real(price[placement]) && global.shd == 1) {
-                global.money -= real(price[placement]);
+            if (global.state.money >= real(price[placement]) && global.shd == 1) {
+                global.state.money -= real(price[placement]);
                 global.shd = 2;
                 global.maxshields = 2;
                 global.shields = global.maxshields;
@@ -27,8 +27,8 @@ if keyboard_check_pressed(vk_enter) {
             }
             break;
         case 2: //shields 3
-            if (global.money >= real(price[placement]) && global.shd == 2) {
-                global.money -= real(price[placement]);
+            if (global.state.money >= real(price[placement]) && global.shd == 2) {
+                global.state.money -= real(price[placement]);
                 global.shd = 3;
                 global.maxshields = 3;
                 global.shields = global.maxshields;
@@ -36,43 +36,43 @@ if keyboard_check_pressed(vk_enter) {
             }
             break;
         case 3: //weapons 1
-            if (global.money >= real(price[placement]) && global.wep == 0) {
-                global.money -= real(price[placement]);
+            if (global.state.money >= real(price[placement]) && global.wep == 0) {
+                global.state.money -= real(price[placement]);
                 global.wep = 1;
                 play_sound(snd_purchase, 1, false);
             }
             break;
         case 4: //weapons 2
-            if (global.money >= real(price[placement]) && global.wep == 1) {
-                global.money -= real(price[placement]);
+            if (global.state.money >= real(price[placement]) && global.wep == 1) {
+                global.state.money -= real(price[placement]);
                 global.wep = 2;
                 play_sound(snd_purchase, 1, false);
             }
             break;
         case 5: //weapons 3
-            if (global.money >= real(price[placement]) && global.wep == 2) {
-                global.money -= real(price[placement]);
+            if (global.state.money >= real(price[placement]) && global.wep == 2) {
+                global.state.money -= real(price[placement]);
                 global.wep = 3;
                 play_sound(snd_purchase, 1, false);
             }
             break;        
         case 6: //systems 1
-            if (global.money >= real(price[placement]) && global.hud == 0) {
-                global.money -= real(price[placement]);
+            if (global.state.money >= real(price[placement]) && global.hud == 0) {
+                global.state.money -= real(price[placement]);
                 global.hud = 1;
                 play_sound(snd_purchase, 1, false);
             }
             break; 
         case 7: //systems 2
-            if (global.money >= real(price[placement]) && global.hud == 1) {
-                global.money -= real(price[placement]);
+            if (global.state.money >= real(price[placement]) && global.hud == 1) {
+                global.state.money -= real(price[placement]);
                 global.hud = 2;
                 play_sound(snd_purchase, 1, false);
             }
             break;
         case 8: //systems 3
-            if (global.money >= real(price[placement]) && global.hud == 2) {
-                global.money -= real(price[placement]);
+            if (global.state.money >= real(price[placement]) && global.hud == 2) {
+                global.state.money -= real(price[placement]);
                 global.hud = 3;
                 play_sound(snd_purchase, 1, false);
             }

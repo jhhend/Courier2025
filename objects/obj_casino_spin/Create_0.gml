@@ -11,7 +11,7 @@ for (var j = 0; j <= staramount; j++) {
 spin = irandom_range(1, 16);
 switch (spin) {
     case 1:
-        global.money += floor(global.pot*1/global.bettype);
+        global.state.money += floor(global.pot*1/global.bettype);
         //global.pot = 3500;
         sound = snd_money;
         break;

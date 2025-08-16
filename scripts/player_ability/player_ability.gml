@@ -10,7 +10,7 @@ function player_ability() {
 	        case POLICE:
 	            var c = instance_nearest(x, y, obj_civillian);
 	            if collision_circle(x, y, radius, c, true, true) && c.illegal {
-	                global.money += c.price;
+	                global.state.money += c.price;
 	                var e = instance_create(c.x, c.y, obj_abilityindicator);
 	                with (e) {
 	                    text = "ARRESTED";
@@ -30,7 +30,7 @@ function player_ability() {
 	            }
 	            var t = instance_nearest(x, y, obj_thief);
 	            if collision_circle(x, y, radius, t, true, true) {
-	                global.money += irandom_range(50, 100);
+	                global.state.money += irandom_range(50, 100);
 	                var g = instance_create(t.x, t.y, obj_abilityindicator);
 	                with (g) {
 	                    text = "ARRESTED";
@@ -45,7 +45,7 @@ function player_ability() {
 	            var c = instance_nearest(x, y, obj_civillian);
 	            if collision_circle(x, y, radius, c, true, true) {
 	                if !c.stolen {
-	                    global.money += irandom_range(20, 50);
+	                    global.state.money += irandom_range(20, 50);
 	                    var e = instance_create(c.x, c.y, obj_abilityindicator);
 	                    with (e) {
 	                        text = "PICKPOCKETED";

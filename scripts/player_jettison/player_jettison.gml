@@ -2,7 +2,7 @@
 function player_jettison() {
 
 	if jettison {
-	    //global.money += 500000; //DEBUG FUNCTION REMOVE LATER
+	    //global.state.money += 500000; //DEBUG FUNCTION REMOVE LATER
 	    var c = 0;
 	    for (var i = 0; i < 3; i++) {
 	        if global.hull[i] == " " {

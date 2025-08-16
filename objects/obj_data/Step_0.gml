@@ -9,7 +9,7 @@ if global.state.ticket && alarm[1] < 0 {
 }
 
 //clamp money
-if (global.money < 0) {
-    global.money = 0;
+if (global.state.money < 0) {
+    global.state.money = 0;
 }
 

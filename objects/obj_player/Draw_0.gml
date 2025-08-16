@@ -37,7 +37,7 @@ if (room == rm_worldmap || room == rm_paradise_worldmap || room == rm_sandbox_wo
 //draw currency
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
-draw_text(__view_get( e__VW.XView, 0 )+16, __view_get( e__VW.YView, 0 )+16, string_hash_to_newline("Currency: $" + string(global.money)));
+draw_text(__view_get( e__VW.XView, 0 )+16, __view_get( e__VW.YView, 0 )+16, string_hash_to_newline("Currency: $" + string(global.state.money)));
 
 //draw sheilds
 var str, col;
