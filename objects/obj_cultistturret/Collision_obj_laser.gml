@@ -31,7 +31,7 @@ destroy_other();
 //reset faction if part of cult faction
 if global.faction == CULT {
     global.faction = -1;
-    global.betray = true;
+    global.state.betray = true;
 }
 
 

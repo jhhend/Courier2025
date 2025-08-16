@@ -32,7 +32,6 @@ global.legaltotal = 0; //total legal packages delivered
 global.illegaltotal = 0; //total illegal packages delivered
 global.factiontotal = 0; //total faction packages delivered
 global.kills = 0; //total number of kills
-global.betray = false; //whether the player has joined and betrayed a faction
 global.blessing = false; //whether the player has received the cult blessing
 global.cultpower = 0; //total cult power
 global.calm = false; //whether alien hives are calm or not

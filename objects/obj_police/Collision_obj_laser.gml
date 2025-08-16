@@ -27,6 +27,6 @@ global.murder++;
 //reset faction if part of police faction
 if global.faction == POLICE {
     global.faction = -1;
-    global.betray = true;
+    global.state.betray = true;
 }
 

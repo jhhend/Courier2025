@@ -26,10 +26,10 @@ switch (placement) {
         if global.faction != -1 && global.faction != CULT {
             tagline = "We do not do deals with outsiders.";
             subtag = "Unable to join when part of another faction."
-        } else if !global.betray {
+        } else if !global.state.betray {
             tagline = "You are not worthy.";
             subtag = "Opposing faction has not been betrayed."
-        } else if global.betray && global.faction == -1 {
+        } else if global.state.betray && global.faction == -1 {
             tagline = "You have proven yourself worthy of salvation.";
             subtag = "Able to join!";
         } else if global.faction == CULT {
@@ -54,7 +54,7 @@ if keyboard_check_pressed(vk_enter) {
             }
             break;
         case 1: //inquire
-            if global.betray && global.faction == -1 {
+            if global.state.betray && global.faction == -1 {
                 destroy_self();
                 instance_create(x, y, obj_cult_offer);
             } else if global.faction == CULT {

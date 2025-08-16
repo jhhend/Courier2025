@@ -34,7 +34,7 @@ if !cult {
     //reset faction if part of police faction
     if (global.faction == POLICE && room != rm_Sandbox) {
         global.faction = -1;
-        global.betray = true;
+        global.state.betray = true;
     }
 }
 

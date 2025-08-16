@@ -77,7 +77,7 @@ function load() {
 	    global.illegaltotal = real(base64_decode(l_illegaltotal));
 	    global.factiontotal = real(base64_decode(l_factiontotal));
 	    global.kills = real(base64_decode(l_kills));
-	    global.betray = real(base64_decode(l_betray));
+	    global.state.betray = real(base64_decode(l_betray));
 	    global.blessing = real(base64_decode(l_blessing));
 	    global.cultpower = real(base64_decode(l_cultpower));
 	    global.calm = real(base64_decode(l_calm));

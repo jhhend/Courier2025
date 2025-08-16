@@ -41,7 +41,7 @@ function save() {
 	var s_illegaltotal = base64_encode(string(global.illegaltotal));
 	var s_factiontotal = base64_encode(string(global.factiontotal));
 	var s_kills = base64_encode(string(global.kills));
-	var s_betray = base64_encode(string(global.betray));
+	var s_betray = base64_encode(string(global.state.betray));
 	var s_blessing = base64_encode(string(global.blessing));
 	var s_cultpower = base64_encode(string(global.cultpower));
 	var s_calm = base64_encode(string(global.calm));

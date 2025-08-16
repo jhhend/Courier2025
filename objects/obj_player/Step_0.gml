@@ -171,7 +171,7 @@ if instance_exists(obj_dropoff) && collision_circle(obj_dropoff.x, obj_dropoff.y
             obj_dropoff.sealed = true;
             if global.faction == POLICE {
                 global.faction = -1;
-                global.betray = true;
+                global.state.betray = true;
             }
             repeat (3) {
                 spawn_police();

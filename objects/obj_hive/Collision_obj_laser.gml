@@ -35,7 +35,7 @@ if hp <= 0 {
     //reset faction if part of cult faction
     if global.faction == ALIEN {
         global.faction = -1;
-        global.betray = true;
+        global.state.betray = true;
     }    
 } else {
     //create explosion
