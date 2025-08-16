@@ -22,10 +22,10 @@ if keyboard_check_pressed(vk_enter) {
             }
             break;
         case 1: //purchase ticket
-            if (global.savings >= price && !global.state.ticket) {
+            if (global.state.savings >= price && !global.state.ticket) {
                 play_sound(snd_money, 1, false);
                 global.state.ticket = true;
-                global.savings -= price;
+                global.state.savings -= price;
                 global.questphase++;
             }
             break;

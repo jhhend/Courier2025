@@ -10,7 +10,7 @@ function save() {
 	/*ENCODE-----------------------------------------------------------------------------------------*/
 	//player stats
 	var s_money = base64_encode(string(global.state.money));
-	var s_savings = base64_encode(string(global.savings))
+	var s_savings = base64_encode(string(global.state.savings))
 	var s_ticket = base64_encode(string(global.state.ticket));
 	var s_hud = base64_encode(string(global.hud));
 	var s_shd = base64_encode(string(global.shd));

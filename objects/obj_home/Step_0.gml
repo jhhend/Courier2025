@@ -17,7 +17,7 @@ if keyboard_check_pressed(vk_enter) {
             break;
         case 1: //deposit
             play_sound(snd_money, 1, false);
-            global.savings += global.state.money;
+            global.state.savings += global.state.money;
             global.state.money = 0;
             break;
         case 2: //save

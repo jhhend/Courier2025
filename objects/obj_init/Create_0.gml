@@ -1,8 +1,6 @@
 randomize(); //set a random seed
 
 //player stats
-global.state.money = 0; //currency
-global.savings = 0; //stored currency
 global.hud = 0; //systems
 global.shd = 0; //sheilds
 global.wep = 0; //weapons

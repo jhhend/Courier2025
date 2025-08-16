@@ -21,7 +21,7 @@ for (var i = 0; i < array_length(text); i++) {
 
 //draw savings and currency
 draw_text(room_width/2, room_height-18, string_hash_to_newline("Currency: $" + string(global.state.money)));
-draw_text(room_width/2, room_height-36, string_hash_to_newline("Savings: $" + string(global.savings)));
+draw_text(room_width/2, room_height-36, string_hash_to_newline("Savings: $" + string(global.state.savings)));
 
 //draw save
 if drawsave {
