@@ -13,7 +13,7 @@ switch type {
         v = a*tan(variance);
         break;
 }
-if global.faction != ALIEN {
+if global.state.faction != ALIEN {
 mp_potential_step_object(obj_player.x, obj_player.y, 0.001, obj_alien);
 
 image_xscale *= buffer;

@@ -1,7 +1,7 @@
 /// @description set_cooldown()
 function player_cooldown() {
 
-	switch (global.faction) {
+	switch (global.state.faction) {
 	    case POLICE:
 	        cooldown = room_speed*15; break;
 	    case THIEF:

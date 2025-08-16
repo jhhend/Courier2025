@@ -3,12 +3,6 @@ randomize(); //set a random seed
 //player stats
 global.maxshields = 0;
 global.shields = global.maxshields;
-global.faction = -1;
-
-//casino
-global.pot = 3500; //the total money amount in the casino pot
-global.banned = false; //whether the player is banned from the casino or not
-global.bettype = 16; //the bet amount where the bet is (1/n)*total money
 
 //cosmetic
 global.color = c_orange; //ship trim color
@@ -23,9 +17,6 @@ global.xprev = -1; //previous x position of player
 global.yprev = -1; //previous y position of player
 global.prevroom = rm_Majorin; //previous room the player was in
 global.thiefspawn = true; //whether thieves will spawn in bask systems
-global.legaltotal = 0; //total legal packages delivered
-global.illegaltotal = 0; //total illegal packages delivered
-global.factiontotal = 0; //total faction packages delivered
 global.kills = 0; //total number of kills
 global.blessing = false; //whether the player has received the cult blessing
 global.cultpower = 0; //total cult power

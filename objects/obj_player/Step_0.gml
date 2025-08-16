@@ -169,8 +169,8 @@ if instance_exists(obj_dropoff) && collision_circle(obj_dropoff.x, obj_dropoff.y
         if global.cargostat[0] == "Illegal" || global.cargostat[1] == "Illegal" || global.cargostat[2] == "Illegal" ||
             global.cargostat[0] == "Thief" || global.cargostat[1] == "Thief" || global.cargostat[2] == "Thief" {
             obj_dropoff.sealed = true;
-            if global.faction == POLICE {
-                global.faction = -1;
+            if global.state.faction == POLICE {
+                global.state.faction = -1;
                 global.state.betray = true;
             }
             repeat (3) {
@@ -180,7 +180,7 @@ if instance_exists(obj_dropoff) && collision_circle(obj_dropoff.x, obj_dropoff.y
         //legal cargo
         } else if ((global.cargodest[i] == remove_prefix(room) || global.cargodest[i] == remove_prefix_underscore(room)) && global.cargostat[i] != "Ilegal" && global.cargostat[i] != "Police" && global.cargostat[i] != "Alien" && global.cargostat[i] != "Thief" && global.cargostat[i] != "Cult") {
             global.state.money += global.cargoval[i];
-            global.legaltotal++;
+            global.state.legalTotal++;
             clear_slot(i);
         } 
     }          
@@ -191,7 +191,7 @@ if instance_exists(obj_criminal) && collision_circle(obj_criminal.x, obj_crimina
     for (var i = 0; i < 3; i++) {
         if ((global.cargodest[i] == remove_prefix(room) || global.cargodest[i] == remove_prefix_underscore(room)) && global.cargostat[i] == "Illegal") {
             global.state.money += 2*global.cargoval[i];
-            global.illegaltotal++;
+            global.state.illegalTotal++;
             clear_slot(i);
         }  
     }          
@@ -228,11 +228,11 @@ if (room != rm_worldmap) {
             break;       
     }
     
-    if instance_exists(inst) && collision_circle(inst.x, inst.y, inst.radius, self, true, false) && global.faction = title && keyboard_check_pressed(vk_enter) {
+    if instance_exists(inst) && collision_circle(inst.x, inst.y, inst.radius, self, true, false) && global.state.faction = title && keyboard_check_pressed(vk_enter) {
         for (var i = 0; i < 3; i++) {
             if ((global.cargodest[i] == remove_prefix(room) || global.cargodest[i] == remove_prefix_underscore(room)) && global.cargostat[i] == string(fact)) {
                 global.state.money += global.cargoval[i];
-                global.factiontotal++;
+                global.state.factionTotal++;
                 if global.cargostat[i] == "Cult" {
                     global.cultpower++;
                 }

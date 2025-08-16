@@ -6,7 +6,7 @@ image_index = irandom_range(0, image_number - 1);
 speed = random_range(3, 4);
 
 //if player is part of police faction, determine legality of ship
-if (global.faction == POLICE) {
+if (global.state.faction == POLICE) {
     if chance(.2) {
         illegal = true;
         price = irandom_range(10, 100)

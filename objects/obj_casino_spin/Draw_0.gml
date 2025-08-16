@@ -56,7 +56,7 @@ if (drawresult = true) {
         case 1:
             c = c_black;
             s = "WIN";
-            w = floor(global.pot*(1/global.bettype));
+            w = floor(global.state.pot*(1/global.state.betType));
             t = "Press any key to collect winnings of#$" + string(w);
             break;
         default:

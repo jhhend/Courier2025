@@ -1,4 +1,4 @@
-if (global.faction != THIEF && global.faction != POLICE) {
+if (global.state.faction != THIEF && global.state.faction != POLICE) {
     fine_robbed();
 }
 

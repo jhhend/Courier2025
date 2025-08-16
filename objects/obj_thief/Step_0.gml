@@ -1,5 +1,5 @@
 /*
-switch (global.faction) {
+switch (global.state.faction) {
     case POLICE:
     case THIEF:
         break;
@@ -17,9 +17,9 @@ switch (global.faction) {
         break;
 }
 */
-//if (global.faction != THIEF) {
+//if (global.state.faction != THIEF) {
 if collision_circle(x, y, radius, obj_player, true, true) {
-    switch (global.faction) {
+    switch (global.state.faction) {
         case POLICE:
         case THIEF:
             speed = 2.5;

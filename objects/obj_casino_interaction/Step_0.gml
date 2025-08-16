@@ -27,7 +27,7 @@ if keyboard_check_pressed(vk_enter) {
             if global.state.money >= minbet {
                 b = 16
                 bet_amount(b);
-                global.bettype = b;
+                global.state.betType = b;
                 room_goto(rm_casino_spin);
             }
             break;
@@ -35,7 +35,7 @@ if keyboard_check_pressed(vk_enter) {
             if global.state.money >= minbet {
                 b = 8;
                 bet_amount(b)
-                global.bettype = b;
+                global.state.betType = b;
                 room_goto(rm_casino_spin);  
             } 
             break;
@@ -43,14 +43,14 @@ if keyboard_check_pressed(vk_enter) {
             if global.state.money >= minbet {
                 b = 4;
                 bet_amount(b);
-                global.bettype = b;
+                global.state.betType = b;
                 room_goto(rm_casino_spin);
             }
         case 3: //half
             if global.state.money >= minbet {
                 b = 2;
                 bet_amount(b);
-                global.bettype = b;
+                global.state.betType = b;
                 room_goto(rm_casino_spin);
             }
             break;
@@ -58,7 +58,7 @@ if keyboard_check_pressed(vk_enter) {
             if global.state.money >= minbet {
                 b = 1;
                 bet_amount(b);
-                global.bettype = b;
+                global.state.betType = b;
                 room_goto(rm_casino_spin);
             }
             break;

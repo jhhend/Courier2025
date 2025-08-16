@@ -17,8 +17,8 @@ destroy_other();
 global.kills++;
 
 //reset faction if part of police faction
-if global.faction == THIEF {
-    global.faction = -1;
+if global.state.faction == THIEF {
+    global.state.faction = -1;
     global.state.betray = true;
 }
 

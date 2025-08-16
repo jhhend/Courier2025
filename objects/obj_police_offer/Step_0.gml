@@ -9,8 +9,8 @@ if keyboard_check_pressed(ord("W")) && placement > 0 {
 if keyboard_check_pressed(vk_enter) {
     switch (placement) {
         case 0: //accept
-            if global.faction = -1{
-                global.faction = POLICE;
+            if global.state.faction = -1{
+                global.state.faction = POLICE;
                 room_goto(rm_Majorin);
             }
             break;

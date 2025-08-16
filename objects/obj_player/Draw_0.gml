@@ -53,7 +53,7 @@ draw_set_color(c_white);
 
 //draw faction
 var fstr, fcol;
-switch (global.faction) {
+switch (global.state.faction) {
     case -1: fstr = "[NEUTRAL]"; fcol = c_gray; break;
     case POLICE: fstr = "[POLICE]"; fcol = c_police; break;
     case THIEF: fstr = "[THIEF]"; fcol = c_thief; break;
@@ -103,7 +103,7 @@ switch (global.state.hud) {
         break;
 }
 
-switch (global.faction) {
+switch (global.state.faction) {
     case POLICE:
         o = obj_police_dropzone; c = c_police; break;
     case THIEF:
@@ -122,7 +122,7 @@ if o != -1 && instance_exists(o){
 
 if drawability {
     var c;
-    switch (global.faction) {
+    switch (global.state.faction) {
         case POLICE: c = c_police; break;
         case THIEF: c = c_thief; break;
         case ALIEN: c = c_alien; break;
@@ -136,7 +136,7 @@ if drawability {
 
 //draw ability and cooldown
 var a, ab, c;
-switch (global.faction) {
+switch (global.state.faction) {
     case POLICE:
         a = 1;
         ab = "[SEARCH]";

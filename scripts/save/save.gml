@@ -17,12 +17,12 @@ function save() {
 	var s_wep = base64_encode(string(global.state.wep));
 	var s_maxshields = base64_encode(string(global.maxshields));
 	var s_shields = base64_encode(string(global.shields));
-	var s_faction = base64_encode(string(global.faction));
+	var s_faction = base64_encode(string(global.state.faction));
 
 	//casino
-	var s_pot = base64_encode(string(global.pot));
-	var s_banned = base64_encode(string(global.banned));
-	var s_bettype = base64_encode(string(global.bettype));
+	var s_pot = base64_encode(string(global.state.pot));
+	var s_banned = base64_encode(string(global.state.casinoBanned));
+	var s_bettype = base64_encode(string(global.state.betType));
 
 	//cosmetic
 	var s_color = base64_encode(string(global.color));
@@ -37,9 +37,9 @@ function save() {
 	var s_yprev = base64_encode(string(global.yprev));
 	var s_prevroom = base64_encode(string(global.prevroom));
 	var s_thiefspawn = base64_encode(string(global.thiefspawn));
-	var s_legaltotal = base64_encode(string(global.legaltotal));
-	var s_illegaltotal = base64_encode(string(global.illegaltotal));
-	var s_factiontotal = base64_encode(string(global.factiontotal));
+	var s_legaltotal = base64_encode(string(global.state.legalTotal));
+	var s_illegaltotal = base64_encode(string(global.state.illegalTotal));
+	var s_factiontotal = base64_encode(string(global.state.factionTotal));
 	var s_kills = base64_encode(string(global.kills));
 	var s_betray = base64_encode(string(global.state.betray));
 	var s_blessing = base64_encode(string(global.blessing));

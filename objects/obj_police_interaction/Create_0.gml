@@ -5,7 +5,7 @@ if !global.thiefspawn {
     text[0] = "Perform Thief Raid ($" + string(price) + ")";
 }
 
-if global.faction != POLICE {
+if global.state.faction != POLICE {
     text[1] = "Inquire"; 
 } else {
     text[1] = "Leave Faction";
@@ -20,7 +20,7 @@ if !global.thiefspawn {
     tagline = "Have any information about the thieves' whereabouts?";
 }
 
-subtag = string(global.legaltotal) + "/10 Legal Cargo Delivered";
+subtag = string(global.state.legalTotal) + "/10 Legal Cargo Delivered";
 
 staramount = 500;
 for (var j = 0; j <= staramount; j++) {

@@ -3,7 +3,7 @@ text[0] = "Remove Murder Charges ($" + string(price) + ")";
 text[1] = "Inquire"; 
 text[2] = "Back"
 
-if global.faction != THIEF {
+if global.state.faction != THIEF {
     text[1] = "Inquire";
 } else {
     text[1] = "Leave Faction";
@@ -16,7 +16,7 @@ if global.murder > 0 {
     tagline = "You're squeaky clean, kid."
 }
 
-subtag = "(" + string(global.illegaltotal) + "/10 Contraband Delivered";
+subtag = "(" + string(global.state.illegalTotal) + "/10 Contraband Delivered";
 
 staramount = 500;
 for (var j = 0; j <= staramount; j++) {

@@ -24,7 +24,7 @@ do {
 } until (r != destination);
 
 //select status
-switch global.faction {
+switch global.state.faction {
     case -1:
         status = choose("Legal", "Legal", "Legal", "Legal", "Illegal");
         break;

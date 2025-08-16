@@ -58,11 +58,11 @@ function load() {
 	    global.state.wep = real(base64_decode(l_wep));
 	    global.maxshields = real(base64_decode(l_maxshields));
 	    global.shields = real(base64_decode(l_shields));
-	    global.faction = real(base64_decode(l_faction));
+	    global.state.faction = real(base64_decode(l_faction));
     
-	    global.pot = real(base64_decode(l_pot));
-	    global.banned = real(base64_decode(l_banned));
-	    global.bettype = real(base64_decode(l_bettype));
+	    global.state.pot = real(base64_decode(l_pot));
+	    global.state.casinoBanned = real(base64_decode(l_banned));
+	    global.state.betType = real(base64_decode(l_bettype));
     
 	    global.color = real(base64_decode(l_color));
 	    global.lasercolor = real(base64_decode(l_lasercolor));
@@ -74,8 +74,8 @@ function load() {
 	    global.yprev = (room_height*(2/3)+64) //load home position
 	    global.prevroom = rm_home;  
 	    global.thiefspawn = real(base64_decode(l_thiefspawn));
-	    global.illegaltotal = real(base64_decode(l_illegaltotal));
-	    global.factiontotal = real(base64_decode(l_factiontotal));
+	    global.state.illegalTotal = real(base64_decode(l_illegaltotal));
+	    global.state.factionTotal = real(base64_decode(l_factiontotal));
 	    global.kills = real(base64_decode(l_kills));
 	    global.state.betray = real(base64_decode(l_betray));
 	    global.blessing = real(base64_decode(l_blessing));

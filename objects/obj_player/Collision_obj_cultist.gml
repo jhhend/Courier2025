@@ -1,4 +1,4 @@
-if global.faction != CULT {
+if global.state.faction != CULT {
     if global.shields <= 0 {
         fine_destroyed();
     } else {

@@ -18,7 +18,7 @@ if keyboard_check(vk_lcontrol) {
 if (keyboard_check_pressed(vk_anykey) && angleoffset == 0) {
     room_goto(rm_Bask_Minor);
     if (spin == 1) {
-        global.pot = 3500;
+        global.state.pot = 3500;
     }
 }
 

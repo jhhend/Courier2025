@@ -1,12 +1,12 @@
 /// @description player_ability
 function player_ability() {
-	if (ability && obj_data.alarm[2] < 0 && global.faction != -1) {
+	if (ability && obj_data.alarm[2] < 0 && global.state.faction != -1) {
 	    drawability = true;
 	} else {
 	    drawability = false;
 	}
 	if (abilityend && obj_data.alarm[2] < 0) {
-	    switch (global.faction) {
+	    switch (global.state.faction) {
 	        case POLICE:
 	            var c = instance_nearest(x, y, obj_civillian);
 	            if collision_circle(x, y, radius, c, true, true) && c.illegal {

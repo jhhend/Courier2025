@@ -23,19 +23,19 @@ switch (placement) {
         }
         break;
     case 1: //inquire/leave
-        if global.legaltotal >= 10 && global.faction == -1 {
+        if global.state.legalTotal >= 10 && global.state.faction == -1 {
             //able to join
             tagline = "I believe we have a position we could offer you.";
             subtag = "Able to join!"
-        } else if global.legaltotal < 10 && global.faction == -1 {
+        } else if global.state.legalTotal < 10 && global.state.faction == -1 {
             //unable to join because of requirement
             tagline = "We have a thorough vetting process within the department.";
-            subtag = string(global.legaltotal) + "/10 Legal Cargo Delivered.";
-        } else if global.faction != -1 && global.faction != POLICE {
+            subtag = string(global.state.legalTotal) + "/10 Legal Cargo Delivered.";
+        } else if global.state.faction != -1 && global.state.faction != POLICE {
             //unable to join because of faction
             tagline = "Complete loyalty to the force is required.";
             subtag = "Unable to join when part of another faction.";
-        } else if global.faction == POLICE {
+        } else if global.state.faction == POLICE {
             //leave
             tagline = "I hope you reconsider your decision.";
             subtag = ""; 
@@ -57,11 +57,11 @@ if keyboard_check_pressed(vk_enter) {
             }
             break;
         case 1: //inquire/leave
-            if global.legaltotal >= 10 && global.faction == -1 {
+            if global.state.legalTotal >= 10 && global.state.faction == -1 {
                 destroy_self();
                 instance_create(x, y, obj_police_offer);
-            } else if global.faction == POLICE {
-                global.faction = -1;
+            } else if global.state.faction == POLICE {
+                global.state.faction = -1;
                 room_goto(rm_Majorin);
             }
             play_sound(snd_select, 1, false);

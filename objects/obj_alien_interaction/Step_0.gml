@@ -23,19 +23,19 @@ switch (placement) {
         }
         break;
     case 1: //inquire
-        if global.kills >= 10 && global.faction == -1 {
+        if global.kills >= 10 && global.state.faction == -1 {
             //able to join
             tagline = "The Queen looks at you with great interest.";
             subtag = "Able to join!";
-        }  else if global.kills < 10 && global.faction == -1 {
+        }  else if global.kills < 10 && global.state.faction == -1 {
             //unable to join because of requirement
             tagline = "The Queen seems indifferent about your presence."
             subtag = string(global.kills) + "/10 humans killed.";
-        } else if global.faction != -1 && global.faction != ALIEN {
+        } else if global.state.faction != -1 && global.state.faction != ALIEN {
             //unable to join because of faction
             tagline = "The Queen looks at you with great disgust.";
             subtag = "Unable to join when part of another faction.";
-        } else if global.faction == ALIEN {
+        } else if global.state.faction == ALIEN {
             //leave
             tagline = "The Queen looks at you with a sad expression.";
             subtag = "";
@@ -57,11 +57,11 @@ if keyboard_check_pressed(vk_enter) {
             }
             break;
         case 1: //inquire
-            if global.kills >= 10 && global.faction == -1 {
+            if global.kills >= 10 && global.state.faction == -1 {
                 destroy_self();
                 instance_create(x, y, obj_alien_offer);
-            } else if global.faction == ALIEN {
-                global.faction = -1;
+            } else if global.state.faction == ALIEN {
+                global.state.faction = -1;
                 room_goto(rm_Axion);
             }
             play_sound(snd_select, 1, false);

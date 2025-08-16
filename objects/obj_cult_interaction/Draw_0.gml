@@ -27,13 +27,13 @@ for (var i = 0; i < array_length(text); i++) {
 
 draw_text(room_width/2, room_height-16, string_hash_to_newline("Currency: $" + string(global.state.money)));
 
-if global.faction == CULT {
+if global.state.faction == CULT {
     draw_set_color(c_cult);
     draw_text(room_width/2, mean(room_width/2, (room_height/5)+32), string_hash_to_newline("CULT POWER: " + string(global.cultpower)));
 }
 
 
-if (global.faction == CULT) {
+if (global.state.faction == CULT) {
     draw_set_font(fnt_hud);
     draw_set_colour(c_cult);
     draw_text(room_width/2, room_height*.75, string_hash_to_newline(@"ABILITY: [CONVERT]

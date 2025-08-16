@@ -9,7 +9,7 @@ if keyboard_check_pressed(ord("W")) && placement > 0 {
 if keyboard_check_pressed(vk_enter) {
     switch (placement) {
         case 0: //accept
-            global.faction = CULT;
+            global.state.faction = CULT;
             room_goto(rm_Korda);
             break;
         case 1: //decline

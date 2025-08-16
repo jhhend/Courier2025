@@ -33,8 +33,8 @@ if hp <= 0 {
     destroy_self();
     destroy_other();    
     //reset faction if part of cult faction
-    if global.faction == ALIEN {
-        global.faction = -1;
+    if global.state.faction == ALIEN {
+        global.state.faction = -1;
         global.state.betray = true;
     }    
 } else {

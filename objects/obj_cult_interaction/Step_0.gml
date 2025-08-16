@@ -23,16 +23,16 @@ switch (placement) {
         }
         break;
     case 1: //inquire
-        if global.faction != -1 && global.faction != CULT {
+        if global.state.faction != -1 && global.state.faction != CULT {
             tagline = "We do not do deals with outsiders.";
             subtag = "Unable to join when part of another faction."
         } else if !global.state.betray {
             tagline = "You are not worthy.";
             subtag = "Opposing faction has not been betrayed."
-        } else if global.state.betray && global.faction == -1 {
+        } else if global.state.betray && global.state.faction == -1 {
             tagline = "You have proven yourself worthy of salvation.";
             subtag = "Able to join!";
-        } else if global.faction == CULT {
+        } else if global.state.faction == CULT {
             //leave
             tagline = "Questioning your faith, my child?";
             subtag = "";
@@ -54,11 +54,11 @@ if keyboard_check_pressed(vk_enter) {
             }
             break;
         case 1: //inquire
-            if global.state.betray && global.faction == -1 {
+            if global.state.betray && global.state.faction == -1 {
                 destroy_self();
                 instance_create(x, y, obj_cult_offer);
-            } else if global.faction == CULT {
-                global.faction = -1;
+            } else if global.state.faction == CULT {
+                global.state.faction = -1;
                 room_goto(rm_Korda);
             }
             play_sound(snd_select, 1, false);
