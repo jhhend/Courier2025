@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"globals",
+  "%Name":"classMenuLine",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"globals",
+  "name":"classMenuLine",
   "parent":{
-    "name":"Conversion",
-    "path":"folders/Conversion.yy",
+    "name":"Menu",
+    "path":"folders/Menu.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

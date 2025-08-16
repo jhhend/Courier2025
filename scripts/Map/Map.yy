@@ -6,7 +6,7 @@
   "name":"Map",
   "parent":{
     "name":"DataStructures",
-    "path":"folders/DataStructures.yy",
+    "path":"folders/Conversion/DataStructures.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

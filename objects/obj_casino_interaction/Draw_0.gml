@@ -28,5 +28,5 @@ draw_text(room_width/2, room_height-18, string_hash_to_newline("Currency: $" + s
 
 //draw pot
 draw_set_font(fnt_hud);
-draw_text(room_width/2, mean(room_width/2, (room_height/5)+32), string_hash_to_newline("CURRENT POT: " + string(global.state.pot)));
+draw_text(room_width/2, mean(room_width/2, (room_height/5)+32), string_hash_to_newline("CURRENT POT: " + string(global.casino.pot)));
 

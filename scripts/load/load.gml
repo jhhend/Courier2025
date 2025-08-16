@@ -60,9 +60,9 @@ function load() {
 	    global.shields = real(base64_decode(l_shields));
 	    global.state.faction = real(base64_decode(l_faction));
     
-	    global.state.pot = real(base64_decode(l_pot));
-	    global.state.casinoBanned = real(base64_decode(l_banned));
-	    global.state.betType = real(base64_decode(l_bettype));
+	    global.casino.pot = real(base64_decode(l_pot));
+	    global.casino.banned = real(base64_decode(l_banned));
+	    global.casino.betType = real(base64_decode(l_bettype));
     
 	    global.color = real(base64_decode(l_color));
 	    global.lasercolor = real(base64_decode(l_lasercolor));

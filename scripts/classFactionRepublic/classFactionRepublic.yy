@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"globals",
+  "%Name":"classFactionRepublic",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"globals",
+  "name":"classFactionRepublic",
   "parent":{
-    "name":"Conversion",
-    "path":"folders/Conversion.yy",
+    "name":"Factions",
+    "path":"folders/Conversion/Factions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

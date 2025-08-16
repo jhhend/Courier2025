@@ -20,9 +20,9 @@ function save() {
 	var s_faction = base64_encode(string(global.state.faction));
 
 	//casino
-	var s_pot = base64_encode(string(global.state.pot));
-	var s_banned = base64_encode(string(global.state.casinoBanned));
-	var s_bettype = base64_encode(string(global.state.betType));
+	var s_pot = base64_encode(string(global.casino.pot));
+	var s_banned = base64_encode(string(global.casino.banned));
+	var s_bettype = base64_encode(string(global.casino.betType));
 
 	//cosmetic
 	var s_color = base64_encode(string(global.color));

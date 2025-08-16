@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"macros",
   "parent":{
-    "name":"Courier082025",
-    "path":"Courier082025.yyp",
+    "name":"Conversion",
+    "path":"folders/Conversion.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

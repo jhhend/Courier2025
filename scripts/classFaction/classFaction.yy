@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"globals",
+  "%Name":"classFaction",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"globals",
+  "name":"classFaction",
   "parent":{
-    "name":"Conversion",
-    "path":"folders/Conversion.yy",
+    "name":"Factions",
+    "path":"folders/Conversion/Factions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
