@@ -1,5 +1,5 @@
 //update button text
-if !global.ticket {
+if !global.state.ticket {
     text[1] = "Purchase Ticket ($" + string(price) + ")";
 } else {
     text[1] = "PURCHASED";
@@ -17,14 +17,14 @@ if keyboard_check_pressed(vk_enter) {
     switch (placement) {
         case 0:
             play_sound(snd_select, 1, false);
-            if global.ticket {
+            if (global.state.ticket) {
                 room_goto(rm_paradise_transport);
             }
             break;
         case 1: //purchase ticket
-            if (global.savings >= price && !global.ticket) {
+            if (global.savings >= price && !global.state.ticket) {
                 play_sound(snd_money, 1, false);
-                global.ticket = true;
+                global.state.ticket = true;
                 global.savings -= price;
                 global.questphase++;
             }

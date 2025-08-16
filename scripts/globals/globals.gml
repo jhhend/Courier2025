@@ -1,7 +1,7 @@
 
 global.state = {
-	
-	ticket: false,
+	// Whether the player can travel to paradise
+	ticket: false, 
 	betrayed: false
 }
 

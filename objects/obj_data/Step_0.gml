@@ -4,7 +4,7 @@ if global.blessing && alarm[0] < 0 {
 }
 
 //DEPOT ALARM
-if global.ticket && alarm[1] < 0 {
+if global.state.ticket && alarm[1] < 0 {
     alarm[1] = MINUTE*2.5;
 }
 

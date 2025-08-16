@@ -52,7 +52,7 @@ function load() {
     
 	    global.money = real(base64_decode(l_money));
 	    global.savings = real(base64_decode(l_savings));
-	    global.ticket = real(base64_decode(l_ticket));
+	    global.state.ticket = real(base64_decode(l_ticket));
 	    global.hud = real(base64_decode(l_hud));
 	    global.shd = real(base64_decode(l_shd));
 	    global.wep = real(base64_decode(l_wep));
