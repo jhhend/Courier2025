@@ -6,7 +6,4 @@ function toggle_pause() {
 	    instance_activate_all();
 	    pause = false;
 	}
-
-
-
 }

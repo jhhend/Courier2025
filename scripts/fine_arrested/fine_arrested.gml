@@ -37,7 +37,4 @@ function fine_arrested() {
 
 	jettison_cargo();
 	room_goto(rm_arrested);
-
-
-
 }

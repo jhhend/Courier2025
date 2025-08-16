@@ -22,7 +22,4 @@ function easter_egg_one() {
 	    }
 	    play_music(mus_easter_egg_one, 1, true);
 	}
-
-
-
 }

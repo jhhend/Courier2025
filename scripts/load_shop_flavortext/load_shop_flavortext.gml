@@ -51,7 +51,4 @@ function load_shop_flavortext() {
 	Far too hostile."
 
 	)//back
-
-
-
 }

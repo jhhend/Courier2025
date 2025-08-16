@@ -10,7 +10,4 @@ function fine_robbed() {
 
 	jettison_cargo();
 	room_goto(rm_robbed);
-
-
-
 }

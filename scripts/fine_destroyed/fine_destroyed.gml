@@ -10,7 +10,4 @@ function fine_destroyed() {
 
 	jettison_cargo();
 	room_goto(rm_destroyed);
-
-
-
 }

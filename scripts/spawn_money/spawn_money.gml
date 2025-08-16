@@ -1,14 +1,7 @@
-/// @description spawn_money(lowbound, highbound);
-/// @param lowbound
-/// @param  highbound
-function spawn_money(argument0, argument1) {
 
-	var o;
-	    o = irandom_range(argument0, argument1);
+function spawn_money(lowBound, highBound) {
+	var o = irandom_range(lowBound, highBound);
 	repeat (o) {
 	    instance_create(x, y, obj_money);
 	}
-
-
-
 }

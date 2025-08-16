@@ -1,6 +1,5 @@
-/// @description set_shop_buttons()
-function set_shop_buttons() {
 
+function set_shop_buttons() {
 	if global.shd >= 1 {text[0] = "PURCHASED"} else {text[0] = "Shields 1"};
 	if global.shd >= 2 {text[1] = "PURCHASED"} else {text[1] = "Shields 2"};
 	if global.shd >= 3 {text[2] = "PURCHASED"} else {text[2] = "Shields 3"};
@@ -10,7 +9,4 @@ function set_shop_buttons() {
 	if global.hud >= 1 {text[6] = "PURCHASED"} else {text[6] = "Systems 1"};
 	if global.hud >= 2 {text[7] = "PURCHASED"} else {text[7] = "Systems 2"}
 	if global.hud >= 3 {text[8] = "PURCHASED"} else {text[8] = "Systems 3"};
-
-
-
 }
