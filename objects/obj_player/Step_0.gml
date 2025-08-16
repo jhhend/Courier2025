@@ -29,7 +29,7 @@ switch (room) {
 	        var x2 = x + lengthdir_x(4, image_angle-90);
 	        var y2 = y + lengthdir_y(4, image_angle-90);
 	        var bound;
-	        switch global.wep {
+	        switch global.state.wep {
 	            case 0:
 	                bound = 8;
 	                break;
@@ -68,7 +68,7 @@ switch (room) {
 	        var x2 = x + lengthdir_x(4, image_angle-90);
 	        var y2 = y + lengthdir_y(4, image_angle-90);
 	        var bound;
-	        switch global.wep {
+	        switch global.state.wep {
 	            case 0:
 	                bound = 8;
 	                break;
@@ -109,7 +109,7 @@ switch (room) {
 	        var x2 = x + lengthdir_x(4, image_angle-90);
 	        var y2 = y + lengthdir_y(4, image_angle-90);
 	        var bound;
-	        switch global.wep {
+	        switch global.state.wep {
 	            case 0:
 	                bound = 8;
 	                break;

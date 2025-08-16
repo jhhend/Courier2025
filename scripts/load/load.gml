@@ -53,9 +53,9 @@ function load() {
 	    global.state.money = real(base64_decode(l_money));
 	    global.state.savings = real(base64_decode(l_savings));
 	    global.state.ticket = real(base64_decode(l_ticket));
-	    global.hud = real(base64_decode(l_hud));
-	    global.shd = real(base64_decode(l_shd));
-	    global.wep = real(base64_decode(l_wep));
+	    global.state.hud = real(base64_decode(l_hud));
+	    global.state.shd = real(base64_decode(l_shd));
+	    global.state.wep = real(base64_decode(l_wep));
 	    global.maxshields = real(base64_decode(l_maxshields));
 	    global.shields = real(base64_decode(l_shields));
 	    global.faction = real(base64_decode(l_faction));

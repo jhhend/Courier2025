@@ -12,9 +12,9 @@ function save() {
 	var s_money = base64_encode(string(global.state.money));
 	var s_savings = base64_encode(string(global.state.savings))
 	var s_ticket = base64_encode(string(global.state.ticket));
-	var s_hud = base64_encode(string(global.hud));
-	var s_shd = base64_encode(string(global.shd));
-	var s_wep = base64_encode(string(global.wep));
+	var s_hud = base64_encode(string(global.state.hud));
+	var s_shd = base64_encode(string(global.state.shd));
+	var s_wep = base64_encode(string(global.state.wep));
 	var s_maxshields = base64_encode(string(global.maxshields));
 	var s_shields = base64_encode(string(global.shields));
 	var s_faction = base64_encode(string(global.faction));

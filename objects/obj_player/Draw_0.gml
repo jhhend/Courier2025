@@ -76,7 +76,7 @@ if global.murder > 0 {
 }
 
 //draw system arrows
-switch (global.hud) {
+switch (global.state.hud) {
     case 3:
         if instance_exists(obj_criminal) && !collision_circle(obj_criminal.x, obj_criminal.y, 64, self, true, false) {
             draw_sprite_ext(spr_arrow, 1, x, y, 1, 1, point_direction(x, y, obj_criminal.x, obj_criminal.y), c_olive, 1);

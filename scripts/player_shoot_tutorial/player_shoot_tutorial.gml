@@ -5,7 +5,7 @@ function player_shoot_tutorial() {
 	    var x2 = x + lengthdir_x(4, image_angle-90);
 	    var y2 = y + lengthdir_y(4, image_angle-90);
 	    var bound;
-	    switch global.wep {
+	    switch global.state.wep {
 	        case 0:
 	            bound = 4;
 	            break;

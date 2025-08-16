@@ -1,9 +1,6 @@
 randomize(); //set a random seed
 
 //player stats
-global.hud = 0; //systems
-global.shd = 0; //sheilds
-global.wep = 0; //weapons
 global.maxshields = 0;
 global.shields = global.maxshields;
 global.faction = -1;
