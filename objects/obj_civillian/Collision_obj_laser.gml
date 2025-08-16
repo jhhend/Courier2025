@@ -1,4 +1,4 @@
-if cult == false {
+if !cult {
     //create explosion
     var i, e;
         i = id;
