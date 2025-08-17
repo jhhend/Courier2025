@@ -1,12 +1,11 @@
+
 image_angle = random(360);
 image_speed = 0;
 image_index = choose(0, 1);
-
 detrad = 64;
-
 name = 0;
-//determine destination
-//create_name();
+
+/*
 var r;
 if room == rm_Bask_Minor || room == rm_Bask_Major {
     r = remove_prefix_underscore(room)
@@ -22,26 +21,22 @@ do {
                             remove_prefix_underscore(rm_Bask_Major),
                             remove_prefix_underscore(rm_Bask_Minor));
 } until (r != destination);
+*/
 
-//select status
+// Determine type
+var statusBank = [ CargoType.Normal, CargoType.Normal, CargoType.Normal, CargoType.Illegal ];
 switch global.faction {
-    case -1:
-        status = choose("Legal", "Legal", "Legal", "Legal", "Illegal");
-        break;
-	case FactionType.Republic:
-        status = choose("Legal", "Legal", "Legal", "Illegal", "Police");
-        break;
-    case FactionType.Mafia:
-        status = choose("Legal", "Legal", "Legal", "Illegal", "Thief");
-        break;
-    case FactionType.Alien:
-        status = choose("Legal", "Legal", "Legal", "Illegal", "Alien");
-        break;
-    case FactionType.Cult:
-        status = choose("Legal", "Legal", "Legal", "Illegal", "Cult");
-        break;
+    case undefined: array_push(statusBank, CargoType.Normal); break;
+	case FactionType.Republic: array_push(statusBank, CargoType.Republic); break;
+    case FactionType.Mafia: array_push(statusBank, CargoType.Mafia); break;
+    case FactionType.Alien: array_push(statusBank, CargoType.Alien); break;
+    case FactionType.Cult: array_push(statusBank, CargoType.Cult); break;
 }
+var status = statusBank[irandom_range(0, array_length(statusBank) - 1)];
 
+cargo = createCargo(status);
+
+/*
 switch (status) {
     case "Police":
         image_index = 0;
@@ -66,10 +61,12 @@ switch (status) {
     default:
         break;     
 }
+*/
 
 draw = false;
 
 //determine name
+/*
 switch (status) {
 	case "Police":
 	    price = irandom_range(100, 150); break;
@@ -82,11 +79,13 @@ switch (status) {
 	default:
 	    price = irandom_range(10, 99); break;
 }
+*/
 
 //determine letters
-if global.blessing {
+/*
+if (global.blessing) {
 	name = choose("A", "B", "C", "D") + string(clamp(price*3, 1, 999)) + choose("W", "X", "Y", "Z");
 } else {
 	name = choose("A", "B", "C", "D") + string(price) + choose("W", "X", "Y", "Z");
 }
-
+*/

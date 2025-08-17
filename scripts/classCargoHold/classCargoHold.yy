@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"classMenuLine",
+  "%Name":"classCargoHold",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"classMenuLine",
+  "name":"classCargoHold",
   "parent":{
-    "name":"Menu",
-    "path":"folders/Conversion/Menu.yy",
+    "name":"Cargo",
+    "path":"folders/Conversion/Cargo.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -2,7 +2,7 @@
 global.state = {
 	
 	// Ship systems
-	hud: 0,
+	hud: 3,
 	shd: 0,
 	wep: 0,
 	
@@ -33,6 +33,9 @@ global.casino = {
 	banned: false,
 	betType: 16
 }
+
+// Cargo hold
+global.cargo = new CargoHold();
 
 // Factions
 global.faction = -1;

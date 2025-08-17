@@ -72,7 +72,24 @@ draw_text(__view_get( e__VW.XView, 0 )+16, __view_get( e__VW.YView, 0 )+31+16, s
 draw_set_color(c_white);
 
 //draw slots
-draw_slots();
+var dp = 48+16;
+var s = "";
+var c = c_white; 
+for (var i = 0; i < global.cargo.size; i++) {
+	var xx = __view_get( e__VW.XView, 0 ) + 16;
+	var yy = __view_get( e__VW.YView, 0 ) + dp;	
+	if (i < array_length(global.cargo.contents)) {
+		var cargo = global.cargo.contents[i];
+		draw_set_color(cargo.color);
+		draw_text(xx, yy, $"Slot {i + 1}: {cargo.name}\nDestination: {roomGetName(cargo.destination)}\nStatus: {cargoTypeGetName(cargo.type)}");
+	} else {
+		draw_set_color(c_white);
+	    draw_text(xx, yy, $"Slot {i + 1}: Empty\n------\n------");
+	}
+	dp += 48;
+}
+draw_set_alpha(1);
+
 
 //draw wanted
 if global.murder > 0 {
@@ -88,17 +105,18 @@ switch (global.state.hud) {
             draw_sprite_ext(spr_arrow, 1, x, y, 1, 1, point_direction(x, y, obj_criminal.x, obj_criminal.y), c_olive, 1);
         }
     case 2:
-        if instance_exists(obj_cargo) {
+		var inst = instance_nearest(x, y, obj_cargo);
+        if (instance_exists(obj_cargo) && inst != noone) {
             var cx, cy, col;
-                cx = instance_nearest(x, y, obj_cargo).x
-                cy = instance_nearest(x, y, obj_cargo).y;
-                switch (instance_nearest(x, y, obj_cargo).status) {
-                    case "Legal": col = c_aqua; break;
-                    case "Illegal": col = c_red; break;
-                    case "Police": col = c_police; break;
-                    case "Thief": col = c_thief; break;
-                    case "Alien": col = c_alien; break;
-                    case "Cult": col = c_cult; break;
+                cx = inst.x
+                cy = inst.y;
+                switch (inst.cargo.type) {
+                    case CargoType.Normal: col = c_aqua; break;
+                    case CargoType.Illegal: col = c_red; break;
+                    case CargoType.Republic: col = c_police; break;
+                    case CargoType.Mafia: col = c_thief; break;
+                    case CargoType.Alien: col = c_alien; break;
+                    case CargoType.Cult: col = c_cult; break;
                 }
             draw_sprite_ext(spr_arrow, 1, x, y, 1, 1, point_direction(x, y, cx, cy), col, 1);
         }

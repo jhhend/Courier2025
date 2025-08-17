@@ -10,8 +10,8 @@
   "name":"obj_cargo",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Cargo",
+    "path":"folders/Conversion/Cargo.yy",
   },
   "parentObjectId":null,
   "persistent":false,

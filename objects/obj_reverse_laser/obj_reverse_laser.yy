@@ -11,8 +11,8 @@
   "name":"obj_reverse_laser",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Paradise",
+    "path":"folders/Objects/Paradise.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -12,10 +12,13 @@
   "name":"obj_criminal",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Dropoffs",
+    "path":"folders/Conversion/Dropoffs.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"objDropzone",
+    "path":"objects/objDropzone/objDropzone.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
