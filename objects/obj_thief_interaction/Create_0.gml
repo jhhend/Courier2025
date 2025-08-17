@@ -3,7 +3,7 @@ text[0] = "Remove Murder Charges ($" + string(price) + ")";
 text[1] = "Inquire"; 
 text[2] = "Back"
 
-if global.state.faction != THIEF {
+if (global.faction != FactionType.Mafia) {
     text[1] = "Inquire";
 } else {
     text[1] = "Leave Faction";

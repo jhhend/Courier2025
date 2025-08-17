@@ -20,7 +20,7 @@ switch (placement) {
         }
         break;
     case 1: //inquire
-        if global.state.faction != -1 {
+        if global.faction != -1 {
             tagline = "Get lost. We don't deal with your kind."
             subtag = "Unable to join when part of another faction." 
         } else if global.state.illegalTotal < 10 {
@@ -29,7 +29,7 @@ switch (placement) {
         } else if global.state.illegalTotal >= 10 {
             tagline = "Perhaps we could work out an arangement...";
             subtag = "Able to join!"
-        } else if global.state.faction == THIEF {
+        } else if (global.faction == FactionType.Mafia) {
             tagline = "Giving up fame and fortune, huh?";
             subtag = "";
         }
@@ -50,14 +50,18 @@ if keyboard_check_pressed(vk_enter) {
             }
             break;
         case 1: //inquire
-            if (global.state.illegalTotal >= 10 && global.state.faction == -1) {
+			/*
+            if (global.state.illegalTotal >= 10 && global.faction == -1) {
                 destroy_self();
                 instance_create(x, y, obj_thief_offer);  
-            } else if global.state.faction == THIEF {
-                global.state.faction = -1;
+            } else if (global.faction == FactionType.Mafia) {
+                global.faction = -1;
                 room_goto(rm_Bask_Major);
             }
             play_sound(snd_select, 1, false);
+			*/
+			destroy_self();
+            instance_create(x, y, obj_thief_offer);  
             break;
         case 2: //back
             play_sound(snd_select, 1, false);

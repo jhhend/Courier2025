@@ -1,6 +1,6 @@
 image_angle -= .5;
 
-if collision_circle(x, y, radius, obj_player, true, true) && global.state.faction != CULT {
+if (collision_circle(x, y, radius, obj_player, true, true) && global.faction != FactionType.Cult) {
     direction = point_direction(x, y, obj_player.x, obj_player.y);
     speed = 2;
     if alarm[0] < 0 {

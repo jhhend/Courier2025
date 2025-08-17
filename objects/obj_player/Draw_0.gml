@@ -52,13 +52,19 @@ draw_text(__view_get( e__VW.XView, 0 )+16, __view_get( e__VW.YView, 0 )+31, stri
 draw_set_color(c_white);
 
 //draw faction
-var fstr, fcol;
-switch (global.state.faction) {
-    case -1: fstr = "[NEUTRAL]"; fcol = c_gray; break;
-    case POLICE: fstr = "[POLICE]"; fcol = c_police; break;
-    case THIEF: fstr = "[THIEF]"; fcol = c_thief; break;
-    case ALIEN: fstr = "[ALIEN]"; fcol = c_alien; break;
-    case CULT: fstr = "[CULTIST]"; fcol = c_cult; break;
+var fstr = "[NEUTRAL]";
+var fcol = c_gray;
+var faction = getFaction();
+if (faction != undefined) {
+	switch (global.faction) {
+		case FactionType.Republic:
+		case FactionType.Cult:
+		case FactionType.Alien:
+		case FactionType.Mafia:
+			fstr = $"[{faction.label}]";
+			fcol = faction.color;
+			break;
+	}
 }
 
 draw_set_color(fcol);
@@ -103,14 +109,14 @@ switch (global.state.hud) {
         break;
 }
 
-switch (global.state.faction) {
-    case POLICE:
+switch (global.faction) {
+	case FactionType.Republic:
         o = obj_police_dropzone; c = c_police; break;
-    case THIEF:
+    case FactionType.Mafia:
         o = obj_thief_dropzone; c = c_thief; break;
-    case ALIEN:
+    case FactionType.Alien:
         o = obj_alien_dropzone; c = c_alien; break;
-    case CULT:
+	case FactionType.Cult:
         o = obj_cult_dropzone; c = c_cult; break;
     case -1:
         o = -1; c = c_white; break;
@@ -121,13 +127,20 @@ if o != -1 && instance_exists(o){
 }
 
 if drawability {
-    var c;
-    switch (global.state.faction) {
-        case POLICE: c = c_police; break;
-        case THIEF: c = c_thief; break;
-        case ALIEN: c = c_alien; break;
-        case CULT: c = c_cult; break;
-        default: c = c_white; break;
+    var c = c_white;
+    switch (global.faction) {
+		case FactionType.Republic:
+			c = c_police;
+			break;
+        case FactionType.Mafia:
+			c = c_thief;
+			break;
+		case FactionType.Alien:
+			c = c_alien;
+			break;
+		case FactionType.Cult:
+			c = c_cult;
+		break;
     }
     draw_set_colour(c);
     draw_set_circle_precision(64);
@@ -135,32 +148,29 @@ if drawability {
 }
 
 //draw ability and cooldown
-var a, ab, c;
-switch (global.state.faction) {
-    case POLICE:
+var a = 0;
+var ab = "";
+var c = c_white;
+switch (global.faction) {
+	case FactionType.Republic:
         a = 1;
         ab = "[SEARCH]";
         c = c_police;
         break;
-    case THIEF:
+    case FactionType.Mafia:
         a = 1;
         ab = "[PICKPOCKET]"
         c = c_thief;
         break;
-    case ALIEN:
+    case FactionType.Alien:
         a = 1;
         ab = "[SWARM]";
         c = c_alien;
         break;
-    case CULT:
+	case FactionType.Cult:
         a = 1;
         ab = "[CONVERT]";
         c = c_cult;
-        break;
-    default:
-        a = 0;
-        ab = "";
-        c = c_white;
         break;
 }
 

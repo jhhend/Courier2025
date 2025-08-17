@@ -24,20 +24,20 @@ do {
 } until (r != destination);
 
 //select status
-switch global.state.faction {
+switch global.faction {
     case -1:
         status = choose("Legal", "Legal", "Legal", "Legal", "Illegal");
         break;
-    case POLICE:
+	case FactionType.Republic:
         status = choose("Legal", "Legal", "Legal", "Illegal", "Police");
         break;
-    case THIEF:
+    case FactionType.Mafia:
         status = choose("Legal", "Legal", "Legal", "Illegal", "Thief");
         break;
-    case ALIEN:
+    case FactionType.Alien:
         status = choose("Legal", "Legal", "Legal", "Illegal", "Alien");
         break;
-    case CULT:
+    case FactionType.Cult:
         status = choose("Legal", "Legal", "Legal", "Illegal", "Cult");
         break;
 }
@@ -70,5 +70,23 @@ switch (status) {
 draw = false;
 
 //determine name
-create_name();
+switch (status) {
+	case "Police":
+	    price = irandom_range(100, 150); break;
+	case "Thief":
+	    price = irandom_range(125, 175); break;
+	case "Alien":
+	    price = irandom_range(75, 125); break;
+	case "Cult":
+	    price = irandom_range(100, 100+global.cultPower); break;
+	default:
+	    price = irandom_range(10, 99); break;
+}
+
+//determine letters
+if global.blessing {
+	name = choose("A", "B", "C", "D") + string(clamp(price*3, 1, 999)) + choose("W", "X", "Y", "Z");
+} else {
+	name = choose("A", "B", "C", "D") + string(price) + choose("W", "X", "Y", "Z");
+}
 

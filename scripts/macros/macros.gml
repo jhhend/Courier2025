@@ -1,9 +1,9 @@
 
 // Factions
-#macro POLICE 1
-#macro THIEF 2
-#macro ALIEN 3
-#macro CULT 4
+#macro POLICE 100
+#macro THIEF 200
+#macro ALIEN 300
+#macro CULT 400
 
 // Colors
 #macro c_police merge_colour(c_aqua, c_blue, .5)

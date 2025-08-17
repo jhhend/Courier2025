@@ -169,8 +169,8 @@ if instance_exists(obj_dropoff) && collision_circle(obj_dropoff.x, obj_dropoff.y
         if global.cargostat[0] == "Illegal" || global.cargostat[1] == "Illegal" || global.cargostat[2] == "Illegal" ||
             global.cargostat[0] == "Thief" || global.cargostat[1] == "Thief" || global.cargostat[2] == "Thief" {
             obj_dropoff.sealed = true;
-            if global.state.faction == POLICE {
-                global.state.faction = -1;
+            if (global.faction == FactionType.Republic) {
+                global.faction = -1;
                 global.state.betray = true;
             }
             repeat (3) {
@@ -203,22 +203,22 @@ if (room != rm_worldmap) {
     switch (room) {
         case rm_Majorin:
             inst = obj_police_dropzone;
-            title = POLICE;
+            title = FactionType.Republic;
             fact = "Police";
             break;
         case rm_Bask_Major:
             inst = obj_thief_dropzone;
-            title = THIEF;
+            title = FactionType.Mafia;
             fact = "Thief";
             break;
         case rm_Axion:
             inst = obj_alien_dropzone;
-            title = ALIEN;
+            title = FactionType.Alien;
             fact = "Alien";
             break;
         case rm_Korda:
             inst = obj_cult_dropzone;
-            title = CULT;
+            title = FactionType.Cult;
             fact = "Cult"
             break;
         default:
@@ -228,13 +228,13 @@ if (room != rm_worldmap) {
             break;       
     }
     
-    if instance_exists(inst) && collision_circle(inst.x, inst.y, inst.radius, self, true, false) && global.state.faction = title && keyboard_check_pressed(vk_enter) {
+    if instance_exists(inst) && collision_circle(inst.x, inst.y, inst.radius, self, true, false) && global.faction = title && keyboard_check_pressed(vk_enter) {
         for (var i = 0; i < 3; i++) {
             if ((global.cargodest[i] == remove_prefix(room) || global.cargodest[i] == remove_prefix_underscore(room)) && global.cargostat[i] == string(fact)) {
                 global.state.money += global.cargoval[i];
-                global.state.factionTotal++;
+                global.factionTotal++;
                 if global.cargostat[i] == "Cult" {
-                    global.cultpower++;
+                    global.cultPower++;
                 }
                 clear_slot(i);
             }

@@ -5,7 +5,7 @@ if global.calm {
     text[0] = "Calm Hive ($" + string(price) + ")";
 }
 
-if global.state.faction != ALIEN {
+if global.faction != FactionType.Alien {
     text[1] = "Inquire"; 
 } else {
     text[1] = "Leave Faction";

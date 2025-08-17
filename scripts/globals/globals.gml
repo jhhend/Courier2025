@@ -34,6 +34,14 @@ global.casino = {
 	betType: 16
 }
 
+// Factions
+global.faction = -1;
+global.factions = new Map();
+global.factions.set(FactionType.Republic, createFaction(FactionType.Republic));
+global.factions.set(FactionType.Mafia, createFaction(FactionType.Mafia));
+global.factions.set(FactionType.Alien, createFaction(FactionType.Alien));
+global.factions.set(FactionType.Cult, createFaction(FactionType.Cult));
+
 // Settings
 global.settings = new Settings();
 

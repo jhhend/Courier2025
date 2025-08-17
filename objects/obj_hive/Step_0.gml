@@ -1,6 +1,6 @@
 image_angle -= .5;
 
-if collision_circle(x, y, radius, obj_player, true, true) && !global.calm && global.state.faction != ALIEN {
+if (collision_circle(x, y, radius, obj_player, true, true) && !global.calm && global.faction != FactionType.Alien) {
     if !hasspawned {
         repeat(7) {
             offset = irandom_range(-4, 4);

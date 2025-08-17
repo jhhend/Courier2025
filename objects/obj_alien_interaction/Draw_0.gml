@@ -30,7 +30,7 @@ if placement != 9 {
     draw_text(room_width/2, room_height-16, string_hash_to_newline("Currency: $" + string(global.state.money)));
 }
 
-if (global.state.faction == ALIEN) {
+if (global.faction == FactionType.Alien) {
     draw_set_font(fnt_hud);
     draw_set_colour(c_alien);
     draw_text(room_width/2, room_height*.75, string_hash_to_newline(@"ABILITY: [SWARM]

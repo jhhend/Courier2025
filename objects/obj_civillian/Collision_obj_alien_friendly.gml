@@ -1,3 +1,4 @@
+
 with (other) {
     var i, e;
         i = id;
@@ -17,4 +18,3 @@ spawn_money(2, 5);
 destroy_self();
 destroy_other();
 global.kills++;
-

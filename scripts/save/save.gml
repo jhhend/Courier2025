@@ -17,7 +17,7 @@ function save() {
 	var s_wep = base64_encode(string(global.state.wep));
 	var s_maxshields = base64_encode(string(global.maxshields));
 	var s_shields = base64_encode(string(global.shields));
-	var s_faction = base64_encode(string(global.state.faction));
+	var s_faction = base64_encode(string(global.faction));
 
 	//casino
 	var s_pot = base64_encode(string(global.casino.pot));
@@ -39,11 +39,11 @@ function save() {
 	var s_thiefspawn = base64_encode(string(global.thiefspawn));
 	var s_legaltotal = base64_encode(string(global.state.legalTotal));
 	var s_illegaltotal = base64_encode(string(global.state.illegalTotal));
-	var s_factiontotal = base64_encode(string(global.state.factionTotal));
+	var s_factiontotal = base64_encode(string(global.factionTotal));
 	var s_kills = base64_encode(string(global.kills));
 	var s_betray = base64_encode(string(global.state.betray));
 	var s_blessing = base64_encode(string(global.blessing));
-	var s_cultpower = base64_encode(string(global.cultpower));
+	var s_cultpower = base64_encode(string(global.cultPower));
 	var s_calm = base64_encode(string(global.calm));
 	var s_tdir = base64_encode(string(global.tdir));
 	var s_questphase = base64_encode(string(global.questphase));

@@ -5,7 +5,7 @@ if !global.thiefspawn {
     text[0] = "Perform Thief Raid ($" + string(price) + ")";
 }
 
-if global.state.faction != POLICE {
+if global.faction != FactionType.Republic {
     text[1] = "Inquire"; 
 } else {
     text[1] = "Leave Faction";

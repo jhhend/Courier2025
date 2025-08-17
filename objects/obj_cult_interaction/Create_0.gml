@@ -5,7 +5,7 @@ if global.blessing {
     text[0] = "Recieve Blessing ($" + string(price) + ")";
 }
 
-if global.state.faction != CULT {
+if (global.faction != FactionType.Cult) {
     text[1] = "Inquire"; 
 } else {
     text[1] = "Leave Faction"

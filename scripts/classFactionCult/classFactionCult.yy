@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"classFactionCult",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"classFactionCult",
+  "parent":{
+    "name":"Factions",
+    "path":"folders/Conversion/Factions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

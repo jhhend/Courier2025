@@ -1,8 +1,8 @@
-if !cult {
+
+if (!cult) {
     //create explosion
-    var i, e;
-        i = id;
-        e = instance_create(x, y, obj_explosion);
+    var i = id;
+	var e = instance_create(x, y, obj_explosion);
     with (e) {
         creator = i;
         image_xscale = creator.image_xscale;
@@ -12,10 +12,9 @@ if !cult {
     //spawn police
     if (room != rm_Sandbox) {
         repeat (3) {
-            var r, xx, yy;
-                r = 128;
-                xx = irandom_range(obj_dropoff.x-r, obj_dropoff.x+r);
-                yy = irandom_range(obj_dropoff.y-r, obj_dropoff.y+r);
+            var r = 128;
+			var xx = irandom_range(obj_dropoff.x-r, obj_dropoff.x+r);
+			var yy = irandom_range(obj_dropoff.y-r, obj_dropoff.y+r);
             instance_create(xx, yy, obj_police);
         }
     }
@@ -32,9 +31,8 @@ if !cult {
     }
     
     //reset faction if part of police faction
-    if (global.state.faction == POLICE && room != rm_Sandbox) {
-        global.state.faction = -1;
+    if (global.faction == FactionType.Republic && room != rm_Sandbox) {
+        global.faction = -1;
         global.state.betray = true;
     }
 }
-

@@ -1,14 +1,14 @@
 /// @description set_cooldown()
 function player_cooldown() {
 
-	switch (global.state.faction) {
-	    case POLICE:
+	switch (global.faction) {
+		case FactionType.Republic:
 	        cooldown = room_speed*15; break;
-	    case THIEF:
+	    case FactionType.Mafia:
 	        cooldown = room_speed*15; break;
-	    case ALIEN:
+	    case FactionType.Alien:
 	        cooldown = room_speed*20; break;
-	    case CULT: 
+	    case FactionType.Cult: 
 	        cooldown = room_speed*10;break;
 	    default:
 	        cooldown = -1; break;

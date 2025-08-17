@@ -9,7 +9,7 @@ if keyboard_check_pressed(ord("W")) && placement > 0 {
 if keyboard_check_pressed(vk_enter) {
     switch (placement) {
         case 0: //accept
-            global.state.faction = ALIEN;
+            global.faction = FactionType.Alien;
             room_goto(rm_Axion);
             break;
         case 1: //decline

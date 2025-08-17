@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"classFactionAlien",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"classFactionAlien",
+  "parent":{
+    "name":"Factions",
+    "path":"folders/Conversion/Factions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

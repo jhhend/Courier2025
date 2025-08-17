@@ -1,4 +1,5 @@
-if (global.state.faction != THIEF && global.state.faction != POLICE) {
+
+if (global.faction != FactionType.Mafia && global.faction != FactionType.Republic) {
     fine_robbed();
 }
 

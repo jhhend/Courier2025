@@ -58,7 +58,7 @@ function load() {
 	    global.state.wep = real(base64_decode(l_wep));
 	    global.maxshields = real(base64_decode(l_maxshields));
 	    global.shields = real(base64_decode(l_shields));
-	    global.state.faction = real(base64_decode(l_faction));
+	    global.faction = real(base64_decode(l_faction));
     
 	    global.casino.pot = real(base64_decode(l_pot));
 	    global.casino.banned = real(base64_decode(l_banned));
@@ -75,11 +75,11 @@ function load() {
 	    global.prevroom = rm_home;  
 	    global.thiefspawn = real(base64_decode(l_thiefspawn));
 	    global.state.illegalTotal = real(base64_decode(l_illegaltotal));
-	    global.state.factionTotal = real(base64_decode(l_factiontotal));
+	    global.factionTotal = real(base64_decode(l_factiontotal));
 	    global.kills = real(base64_decode(l_kills));
 	    global.state.betray = real(base64_decode(l_betray));
 	    global.blessing = real(base64_decode(l_blessing));
-	    global.cultpower = real(base64_decode(l_cultpower));
+	    global.cultPower = real(base64_decode(l_cultpower));
 	    global.calm = real(base64_decode(l_calm));
 	    global.tdir = real(base64_decode(l_tdir));
 	    global.questphase = real(base64_decode(l_questphase));

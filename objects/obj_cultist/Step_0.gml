@@ -1,4 +1,5 @@
-if global.state.faction != CULT {
+
+if (global.faction != FactionType.Cult) {
     if collision_circle(x, y, radius, obj_player, true, true) {
         direction = point_direction(x, y, obj_player.x, obj_player.y);
     } else {
@@ -7,4 +8,3 @@ if global.state.faction != CULT {
 }
 
 image_angle = direction;
-

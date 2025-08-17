@@ -10,8 +10,8 @@
   "name":"obj_alien_offer",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Menu",
+    "path":"folders/Menu.yy",
   },
   "parentObjectId":null,
   "persistent":false,

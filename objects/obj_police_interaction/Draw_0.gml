@@ -27,7 +27,7 @@ for (var i = 0; i < array_length(text); i++) {
 
 draw_text(room_width/2, room_height-16, string_hash_to_newline("Currency: $" + string(global.state.money)));
 
-if (global.state.faction == POLICE) {
+if (global.faction == FactionType.Republic) {
     draw_set_font(fnt_hud);
     draw_set_colour(c_police);
     draw_text(room_width/2, room_height*.75, string_hash_to_newline(@"ABILITY: [SEARCH]

@@ -9,12 +9,12 @@ if keyboard_check_pressed(ord("W")) && placement > 0 {
 if keyboard_check_pressed(vk_enter) {
     switch (placement) {
         case 0: //accept
-            global.state.faction = CULT;
+            global.faction = FactionType.Cult;
             room_goto(rm_Korda);
             break;
         case 1: //decline
             destroy_self();
-            instance_create(x, y, object45);
+            instance_create(x, y, obj_cult_interaction);
             break;
     }
     play_sound(snd_select, 1, false);
