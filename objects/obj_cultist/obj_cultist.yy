@@ -12,8 +12,8 @@
   "name":"obj_cultist",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Cult",
+    "path":"folders/Objects/Cult.yy",
   },
   "parentObjectId":null,
   "persistent":false,

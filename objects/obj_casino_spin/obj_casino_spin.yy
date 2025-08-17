@@ -10,8 +10,8 @@
   "name":"obj_casino_spin",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Casino",
+    "path":"folders/Objects/Casino.yy",
   },
   "parentObjectId":null,
   "persistent":false,

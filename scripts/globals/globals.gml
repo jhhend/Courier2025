@@ -34,6 +34,9 @@ global.casino = {
 	betType: 16
 }
 
+// Cargo hold
+global.cargo = new CargoHold();
+
 // Factions
 global.faction = -1;
 global.factions = new Map();

@@ -13,8 +13,8 @@
   "name":"obj_bar",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Paradise",
+    "path":"folders/Objects/Paradise.yy",
   },
   "parentObjectId":null,
   "persistent":false,

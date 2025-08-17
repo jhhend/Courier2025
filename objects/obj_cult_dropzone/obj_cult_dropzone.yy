@@ -10,8 +10,8 @@
   "name":"obj_cult_dropzone",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Cult",
+    "path":"folders/Objects/Cult.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -72,7 +72,24 @@ draw_text(__view_get( e__VW.XView, 0 )+16, __view_get( e__VW.YView, 0 )+31+16, s
 draw_set_color(c_white);
 
 //draw slots
-draw_slots();
+var dp = 48+16;
+var s = "";
+var c = c_white; 
+for (var i = 0; i < global.cargo.size; i++) {
+	var xx = __view_get( e__VW.XView, 0 ) + 16;
+	var yy = __view_get( e__VW.YView, 0 ) + dp;	
+	if (i < array_length(global.cargo.contents)) {
+		var cargo = global.cargo.contents[i];
+		draw_set_color(cargo.color);
+		draw_text(xx, yy, $"Slot {i + 1}: {cargo.name}\nDestination: {roomGetName(cargo.destination)}\nStatus: {cargoTypeGetName(cargo.type)}");
+	} else {
+		draw_set_color(c_white);
+	    draw_text(xx, yy, $"Slot {i + 1}: Empty\n------\n------");
+	}
+	dp += 48;
+}
+draw_set_alpha(1);
+
 
 //draw wanted
 if global.murder > 0 {

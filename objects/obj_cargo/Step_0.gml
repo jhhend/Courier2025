@@ -1,3 +1,22 @@
+
+var inRange = collision_circle(x, y, detrad, obj_player, true, false);
+
+if (!inRange) {
+	draw = false;
+	exit;
+}
+
+draw = true;
+
+if (keyboard_check_pressed(vk_enter)) {
+	if (global.cargo.isFull()) { exit; }
+	
+	// Pick up the cargo
+	global.cargo.add(cargo);
+	instance_destroy();
+}
+
+/*
 if collision_circle(x, y, detrad, obj_player, true, false) {
     draw = true;
     var num = -1;
@@ -36,4 +55,4 @@ if collision_circle(x, y, detrad, obj_player, true, false) {
 } else {
     draw = false;
 }
-
+*/

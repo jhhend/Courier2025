@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"macros",
   "parent":{
-    "name":"Conversion",
-    "path":"folders/Conversion.yy",
+    "name":"Fonts",
+    "path":"folders/Fonts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -11,8 +11,8 @@
   "name":"obj_alien_friendly",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Alien",
+    "path":"folders/Objects/Alien.yy",
   },
   "parentObjectId":null,
   "persistent":false,
