@@ -6,3 +6,4 @@ if (global.murder > 0) {
     sealed = false;
 }
 
+deliveryCheck();

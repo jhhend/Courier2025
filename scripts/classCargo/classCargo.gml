@@ -54,7 +54,7 @@ function CargoRepublic() : Cargo() constructor {
 	type = CargoType.Republic;
 	color = c_police;
 	sprite = spr_cargo_police;
-	destination = rm_Majorin;
+	static generateDestination = function() { return rm_Majorin }
 	minPrice = 100;
 	maxPrice = 150;
 	
@@ -65,7 +65,7 @@ function CargoMafia() : Cargo() constructor {
 	type = CargoType.Mafia;
 	color = c_thief;
 	sprite = spr_cargo_thief;
-	destination = rm_Bask_Major;
+	static generateDestination = function() { return rm_Bask_Major }
 	illegal = true;
 	minPrice = 125;
 	maxPrice = 175;
@@ -78,6 +78,7 @@ function CargoAlien() : Cargo() constructor {
 	color = c_alien;
 	sprite = spr_cargo_alien;
 	destination = rm_Axion;
+	static generateDestination = function() { return rm_Axion }
 	minPrice = 100;
 	maxPrice = 125;
 	
@@ -89,6 +90,7 @@ function CargoCult() : Cargo() constructor {
 	color = c_cult;
 	sprite = spr_cargo_cult;
 	destination = rm_Korda;
+	static generateDestination = function() { return rm_Korda }
 	minPrice = 100;
 	maxPrice = 100 + global.cultPower;
 	

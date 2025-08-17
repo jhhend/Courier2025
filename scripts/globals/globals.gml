@@ -2,7 +2,7 @@
 global.state = {
 	
 	// Ship systems
-	hud: 0,
+	hud: 3,
 	shd: 0,
 	wep: 0,
 	

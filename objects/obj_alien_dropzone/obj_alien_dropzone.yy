@@ -11,10 +11,13 @@
   "name":"obj_alien_dropzone",
   "overriddenProperties":[],
   "parent":{
-    "name":"Alien",
-    "path":"folders/Objects/Alien.yy",
+    "name":"Dropoffs",
+    "path":"folders/Conversion/Dropoffs.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"objDropzone",
+    "path":"objects/objDropzone/objDropzone.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

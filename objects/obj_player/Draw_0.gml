@@ -105,17 +105,18 @@ switch (global.state.hud) {
             draw_sprite_ext(spr_arrow, 1, x, y, 1, 1, point_direction(x, y, obj_criminal.x, obj_criminal.y), c_olive, 1);
         }
     case 2:
-        if instance_exists(obj_cargo) {
+		var inst = instance_nearest(x, y, obj_cargo);
+        if (instance_exists(obj_cargo) && inst != noone) {
             var cx, cy, col;
-                cx = instance_nearest(x, y, obj_cargo).x
-                cy = instance_nearest(x, y, obj_cargo).y;
-                switch (instance_nearest(x, y, obj_cargo).status) {
-                    case "Legal": col = c_aqua; break;
-                    case "Illegal": col = c_red; break;
-                    case "Police": col = c_police; break;
-                    case "Thief": col = c_thief; break;
-                    case "Alien": col = c_alien; break;
-                    case "Cult": col = c_cult; break;
+                cx = inst.x
+                cy = inst.y;
+                switch (inst.cargo.type) {
+                    case CargoType.Normal: col = c_aqua; break;
+                    case CargoType.Illegal: col = c_red; break;
+                    case CargoType.Republic: col = c_police; break;
+                    case CargoType.Mafia: col = c_thief; break;
+                    case CargoType.Alien: col = c_alien; break;
+                    case CargoType.Cult: col = c_cult; break;
                 }
             draw_sprite_ext(spr_arrow, 1, x, y, 1, 1, point_direction(x, y, cx, cy), col, 1);
         }
