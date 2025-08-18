@@ -6,7 +6,7 @@ if draw {
     draw_set_colour(c_white);
     draw_set_halign(fa_center);
     draw_set_halign(fa_middle);
-    draw_text(x, y-dist-16, string_hash_to_newline(name));
+    draw_text(x, y-dist-16, name);
 }
 
 

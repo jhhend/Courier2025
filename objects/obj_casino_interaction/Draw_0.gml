@@ -11,22 +11,21 @@ draw_text(room_width/2, room_height/5, "CASINO");
 
 //draw tagline
 draw_set_font(fnt_hud);
-draw_text(room_width/2, (room_height/5)+32, string_hash_to_newline(""));
+draw_text(room_width/2, (room_height/5)+32, "");
 
 //draw selection options
 draw_set_font(fnt_standard);
 for (var i = 0; i < array_length(text); i++) {
     if placement == i {
-        draw_text(room_width/2, (room_height/2)+(i*32), string_hash_to_newline(">" + text[i] + "<"));
+        draw_text(room_width/2, (room_height/2)+(i*32), $">{text[i]}<");
     } else {
-        draw_text(room_width/2, (room_height/2)+(i*32), string_hash_to_newline(text[i]));
+        draw_text(room_width/2, (room_height/2)+(i*32), text[i]);
     }
 }
 
 //draw savings and currency
-draw_text(room_width/2, room_height-18, string_hash_to_newline("Currency: $" + string(global.state.money)));
+draw_text(room_width/2, room_height-18, $"Currency: ${global.state.money}");
 
 //draw pot
-draw_set_font(fnt_hud);
-draw_text(room_width/2, mean(room_width/2, (room_height/5)+32), string_hash_to_newline("CURRENT POT: " + string(global.casino.pot)));
+draw_set_font(fnt_hud);raw_text(room_width/2, mean(room_width/2, (room_height/5)+32), $"CURRENT POT: {global.casino.pot}");
 

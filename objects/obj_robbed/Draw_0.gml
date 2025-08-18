@@ -9,10 +9,10 @@ draw_set_valign(fa_top);
 draw_text(room_width/2, room_height/5, "YOU HAVE BEEN\nROBBED");
 
 draw_set_font(fnt_standard);
-draw_text(room_width/2, (room_height/2)+32, string_hash_to_newline("The thief stole $" + string(global.fine) + @". 
+draw_text(room_width/2, (room_height/2)+32, "The thief stole $" + string(global.fine) + @". 
 Your cargo has been stolen.
 
-Press any key to continue."));
+Press any key to continue.");
 
 /*
 //hint

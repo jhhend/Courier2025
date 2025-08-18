@@ -11,7 +11,7 @@ draw_text(room_width/2, room_height/5, "THE QUEEN");
 
 //draw tagline
 draw_set_font(fnt_hud);
-draw_text(room_width/2, (room_height/5)+32, string_hash_to_newline(tagline))
+draw_text(room_width/2, (room_height/5)+32, tagline)
 
 draw_set_font(fnt_standard);
 for (var i = 0; i < array_length(text); i++) {

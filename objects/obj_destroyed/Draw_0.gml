@@ -9,10 +9,10 @@ draw_set_valign(fa_top);
 draw_text(room_width/2, room_height/5, "YOU HAVE BEEN\nDESTROYED");
 
 draw_set_font(fnt_standard);
-draw_text(room_width/2, (room_height/2)+32, string_hash_to_newline("Your ship repairs cost $" + string(global.fine) + @". 
+draw_text(room_width/2, (room_height/2)+32, "Your ship repairs cost $" + string(global.fine) + @". 
 Your cargo has been destroyed.
 
-Press any key to continue."));
+Press any key to continue.");
 
 /*
 //hint

@@ -16,11 +16,11 @@ draw_text_quotations(room_width/2, (room_height/5)+32, tagline)
 draw_set_font(fnt_standard);
 for (var i = 0; i < array_length(text); i++) {
     if placement == i {
-        draw_text(room_width/2, (room_height/2)+(i*32), string_hash_to_newline(">" + text[i] + "<"));
+        draw_text(room_width/2, (room_height/2)+(i*32), ">" + text[i] + "<");
     } else {
-        draw_text(room_width/2, (room_height/2)+(i*32), string_hash_to_newline(text[i]));
+        draw_text(room_width/2, (room_height/2)+(i*32), text[i]);
     }
 }
 
-draw_text(room_width/2, room_height-16, string_hash_to_newline("Currency: $" + string(global.state.money)));
+draw_text(room_width/2, room_height-16, "Currency: $" + string(global.state.money));
 

@@ -12,7 +12,7 @@ if draw {
     draw_set_colour(c_white);
     draw_set_halign(fa_center);
     draw_set_halign(fa_middle);
-    draw_text(x, y-dist-16, string_hash_to_newline(name));
+    draw_text(x, y-dist-16, name);
 }
 
 if (global.prevroom = rm_sandbox_transition) {
@@ -23,9 +23,11 @@ if (global.prevroom = rm_sandbox_transition) {
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
     draw_set_colour(c_dkgray);
-    draw_rectangle(xx-(.5*string_width(string_hash_to_newline(text))),yy-(.5*string_height(string_hash_to_newline(text))),xx+(.5*string_width(string_hash_to_newline(text))),yy+(.5*string_height(string_hash_to_newline(text))),false);
+    var strWidth = string_width(text);
+    var strHeight = string_height(text);
+    draw_rectangle(xx-(.5*strWidth),yy-(.5*strHeight),xx+(.5*strWidth),yy+(.5*strHeight),false);
     draw_set_colour(c_cult);
-    draw_text(xx, yy, string_hash_to_newline(string(text)));
+    draw_text(xx, yy, text);
     draw_set_colour(c_white);
     draw_set_alpha(rectalpha);
     draw_rectangle(0, 0, room_width, room_height, false);

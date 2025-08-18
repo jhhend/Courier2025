@@ -19,17 +19,17 @@ if placement != array_length(text) - 1 {
 draw_set_font(fnt_standard);
 for (var i = 0; i < array_length(text); i++) {
     if placement == i {
-        draw_text(room_width/2, (room_height/2)+(i*32), string_hash_to_newline(">" + text[i] + "<"));
+        draw_text(room_width/2, (room_height/2)+(i*32), $">{text[i]}<");
     } else {
-        draw_text(room_width/2, (room_height/2)+(i*32), string_hash_to_newline(text[i]));
+        draw_text(room_width/2, (room_height/2)+(i*32), text[i]);
     }
 }
 
-draw_text(room_width/2, room_height-16, string_hash_to_newline("Currency: $" + string(global.state.money)));
+draw_text(room_width/2, room_height-16, $"Currency: ${global.state.money}");
 
 if (global.faction == FactionType.Cult) {
     draw_set_color(c_cult);
-    draw_text(room_width/2, mean(room_width/2, (room_height/5)+32), string_hash_to_newline("CULT POWER: " + string(global.cultPower)));
+    draw_text(room_width/2, mean(room_width/2, (room_height/5)+32), $"CULT POWER: {global.cultPower}");
 }
 
 

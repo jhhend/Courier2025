@@ -14,7 +14,7 @@ draw_set_valign(fa_top);
 draw_set_color(c_white);
 
 //draw room name
-var s;
+var s = "";
 if room == rm_worldmap || room == rm_paradise_worldmap || room == rm_sandbox_worldmap {
     s = "";
 } else if room == rm_Bask_Minor || room == rm_Bask_Major {
@@ -25,7 +25,7 @@ if room == rm_worldmap || room == rm_paradise_worldmap || room == rm_sandbox_wor
 draw_set_font(fnt_hud);
 draw_set_color(c_white);
 draw_set_halign(fa_center);
-draw_text(__view_get( e__VW.XView, 0 ) + (__view_get( e__VW.WView, 0 )/2), __view_get( e__VW.YView, 0 )+8, string_hash_to_newline(string(s)));
+draw_text(__view_get( e__VW.XView, 0 ) + (__view_get( e__VW.WView, 0 )/2), __view_get( e__VW.YView, 0 )+8, s);
 
 //dull hud if player flies underneath text
 if (room == rm_worldmap || room == rm_paradise_worldmap || room == rm_sandbox_worldmap) && collision_rectangle(0, 0, 128, 200, obj_player, true, false) {
@@ -37,10 +37,11 @@ if (room == rm_worldmap || room == rm_paradise_worldmap || room == rm_sandbox_wo
 //draw currency
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
-draw_text(__view_get( e__VW.XView, 0 )+16, __view_get( e__VW.YView, 0 )+16, string_hash_to_newline("Currency: $" + string(global.state.money)));
+draw_text(__view_get( e__VW.XView, 0 )+16, __view_get( e__VW.YView, 0 )+16, "Currency: $" + string(global.state.money));
 
 //draw sheilds
-var str, col;
+var str = "";
+var col = c_white;
 switch (global.shields) {
     case 0: str = "[][][]"; col = c_red; break;
     case 1: str = "[ ][][]"; col = c_orange; break;
@@ -48,7 +49,7 @@ switch (global.shields) {
     case 3: str = "[ ][ ][ ]"; col = c_lime; break;
 }
 draw_set_color(col)
-draw_text(__view_get( e__VW.XView, 0 )+16, __view_get( e__VW.YView, 0 )+31, string_hash_to_newline(string(str)));
+draw_text(__view_get( e__VW.XView, 0 )+16, __view_get( e__VW.YView, 0 )+31, str);
 draw_set_color(c_white);
 
 //draw faction
@@ -68,7 +69,7 @@ if (faction != undefined) {
 }
 
 draw_set_color(fcol);
-draw_text(__view_get( e__VW.XView, 0 )+16, __view_get( e__VW.YView, 0 )+31+16, string_hash_to_newline(string(fstr)));
+draw_text(__view_get( e__VW.XView, 0 )+16, __view_get( e__VW.YView, 0 )+31+16, fstr);
 draw_set_color(c_white);
 
 //draw slots
@@ -195,10 +196,10 @@ switch (global.faction) {
 draw_set_alpha(a);
 draw_set_halign(fa_right);
 draw_set_colour(c);
-draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-16, __view_get( e__VW.YView, 0 )+16, string_hash_to_newline(string(ab)));
+draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-16, __view_get( e__VW.YView, 0 )+16, string(ab));
 draw_set_colour(c_white);
 if obj_data.alarm[2] > 0 {
-    draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-16, __view_get( e__VW.YView, 0 )+31, string_hash_to_newline(string(ceil(obj_data.alarm[2]/60)) + "s"));
+    draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-16, __view_get( e__VW.YView, 0 )+31, string(ceil(obj_data.alarm[2]/60)) + "s");
 }
 draw_set_alpha(1);
 
@@ -208,7 +209,7 @@ if (global.questphase == 3) {
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
     draw_set_colour(c_cult);
-    draw_text(__view_get( e__VW.XView, 0 )+(__view_get( e__VW.WView, 0 )/2), __view_get( e__VW.YView, 0 )+(__view_get( e__VW.WView, 0 )-32), string_hash_to_newline("◆"))
+    draw_text(__view_get( e__VW.XView, 0 )+(__view_get( e__VW.WView, 0 )/2), __view_get( e__VW.YView, 0 )+(__view_get( e__VW.WView, 0 )-32), "◆")
 }
 
 if (global.settings.get("showFps")) {
@@ -216,7 +217,7 @@ if (global.settings.get("showFps")) {
     draw_set_valign(fa_top);
     draw_set_colour(c_yellow);
     draw_set_font(fnt_hud);
-    draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-8, __view_get( e__VW.YView, 0 )+8, string_hash_to_newline(string(fps)));
+    draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-8, __view_get( e__VW.YView, 0 )+8, string(fps));
 }
 
 if drawegg {

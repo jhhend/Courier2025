@@ -23,14 +23,14 @@ function draw_slots() {
 	            c = c_white; break;
 	    }
 	        draw_set_color(global.slotcol[i]);
-	        draw_text(__view_get( e__VW.XView, 0 )+16, __view_get( e__VW.YView, 0 )+dp, string_hash_to_newline("Slot "  + string(i+1) + ": "+ string(global.cargoname[i]) + @"
+	        draw_text(__view_get( e__VW.XView, 0 )+16, __view_get( e__VW.YView, 0 )+dp,"Slot "  + string(i+1) + ": "+ string(global.cargoname[i]) + @"
 	Destination: " + string(global.cargodest[i]) + @"
-	Status: " +string(s)));        
+	Status: " +string(s));        
 	    } else {
 	        draw_set_color(global.slotcol[i]);
-	        draw_text(__view_get( e__VW.XView, 0 )+16, __view_get( e__VW.YView, 0 )+dp, string_hash_to_newline("Slot "  + string(i+1) + @": Empty
+	        draw_text(__view_get( e__VW.XView, 0 )+16, __view_get( e__VW.YView, 0 )+dp, "Slot "  + string(i+1) + @": Empty
 	------
-	------"));
+	------");
 	    }
 	    dp += 48;
 	}

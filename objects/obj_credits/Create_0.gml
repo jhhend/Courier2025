@@ -35,7 +35,7 @@ Snetsy
 
 ThatFroGuy";
 
-height = string_height(string_hash_to_newline(title))+string_height(string_hash_to_newline(text));
+height = string_height(title) + string_height(text);
 
 image[0] = spr_player;
 image[1] = spr_player;

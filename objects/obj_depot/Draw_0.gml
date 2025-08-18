@@ -17,13 +17,13 @@ draw_text(room_width/2, (room_height/5)+32, "NOTE: Purchases made at this depot 
 draw_set_font(fnt_standard);
 for (var i = 0; i < array_length(text); i++) {
     if placement == i {
-        draw_text(room_width/2, (room_height/2)+(i*32), string_hash_to_newline(">" + text[i] + "<"));
+        draw_text(room_width/2, (room_height/2)+(i*32), ">" + text[i] + "<");
     } else {
-        draw_text(room_width/2, (room_height/2)+(i*32), string_hash_to_newline(text[i]));
+        draw_text(room_width/2, (room_height/2)+(i*32), text[i]);
     }
 }
 
 //draw savings and currency
-draw_text(room_width/2, room_height-18, string_hash_to_newline("Currency: $" + string(global.state.money)));
-draw_text(room_width/2, room_height-36, string_hash_to_newline("Savings: $" + string(global.state.savings)));
+draw_text(room_width/2, room_height-18, "Currency: $" + string(global.state.money));
+draw_text(room_width/2, room_height-36, "Savings: $" + string(global.state.savings));
 

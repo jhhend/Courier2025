@@ -26,7 +26,7 @@ if (cont == 1 && draw) {
     draw_set_halign(fa_right);
     draw_set_valign(fa_bottom);
     draw_set_alpha(.5)
-    draw_text(room_width, room_height, string_hash_to_newline("PRESS ANY KEY TO CONTINUE"));
+    draw_text(room_width, room_height, "PRESS ANY KEY TO CONTINUE");
 }
 
 draw_set_alpha(1);

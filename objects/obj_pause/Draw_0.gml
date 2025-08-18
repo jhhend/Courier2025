@@ -16,9 +16,9 @@ if (pause) {
     draw_set_font(fnt_standard);
     for (var i = 0; i < array_length(text); i++) {
         if placement == i {
-            draw_text(midx, midy+(i*32), string_hash_to_newline(">" + text[i] + "<"));
+            draw_text(midx, midy+(i*32), ">" + text[i] + "<");
         } else {
-            draw_text(midx, midy+(i*32), string_hash_to_newline(text[i]));    
+            draw_text(midx, midy+(i*32), text[i]);    
         }
     }
     draw_set_font(fnt_hud);
@@ -30,7 +30,7 @@ if (pause) {
         } else {
             draw_set_colour(c_dkgray);
         }
-        draw_text(__view_get( e__VW.XView, 0 ) + (__view_get( e__VW.WView, 0 )/2), midy+32+(i*32), string_hash_to_newline(quest[i]));
+        draw_text(__view_get( e__VW.XView, 0 ) + (__view_get( e__VW.WView, 0 )/2), midy+32+(i*32), quest[i]);
     }
 }
 

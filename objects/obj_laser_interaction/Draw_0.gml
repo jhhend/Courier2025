@@ -13,9 +13,9 @@ draw_text(room_width/2, room_height/5, "LASER CRYSTALS");
 draw_set_font(fnt_standard);
 for (var i = 0; i < array_length(text); i++) {
     if placement == i{
-        draw_text(72, (room_height/5)+63+(i*32), string_hash_to_newline(">" + text[i] + "<"));
+        draw_text(72, (room_height/5)+63+(i*32), ">" + text[i] + "<");
     } else {
-        draw_text(72, (room_height/5)+63+(i*32), string_hash_to_newline(text[i]));    
+        draw_text(72, (room_height/5)+63+(i*32), text[i]);    
     }
 }
 

@@ -11,7 +11,7 @@ guarded by a sentient prison known as the GEMKEEPER.
 
 The price to travel to PARADISE is a hefty one... But could
 the cost be worth it?";
-textheight = string_height(string_hash_to_newline(text));
+textheight = string_height(text);
 
 x = room_width/2;
 y = room_height+(textheight/2);
