@@ -27,8 +27,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Cult",
-    "path":"folders/Sprites/Cult.yy",
+    "name":"Cargo",
+    "path":"folders/Conversion/Cargo.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

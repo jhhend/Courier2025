@@ -13,6 +13,11 @@
 #macro c_paradise make_colour_hsv(random_range(15, 45), 255, 255)
 #macro c_pink c_fuchsia
 
+#macro COLORS_MAJORIN [ c_aqua, c_white, c_yellow, c_orange ]
+#macro COLORS_BASK [ c_red, c_orange, c_yellow, c_white ]
+#macro COLORS_AXION [ c_lime, c_white, c_yellow, c_green ]
+#macro COLORS_KORDA [ c_fuchsia, c_purple, c_white, c_yellow ]
+
 // Time
 #macro MINUTE room_speed*60
 

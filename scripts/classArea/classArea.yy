@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"macros",
+  "%Name":"classArea",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"macros",
+  "name":"classArea",
   "parent":{
-    "name":"Conversion",
-    "path":"folders/Conversion.yy",
+    "name":"Areas",
+    "path":"folders/Conversion/Areas.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

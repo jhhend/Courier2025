@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"macros",
+  "%Name":"enumAreaType",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"macros",
+  "name":"enumAreaType",
   "parent":{
-    "name":"Conversion",
-    "path":"folders/Conversion.yy",
+    "name":"Areas",
+    "path":"folders/Conversion/Areas.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

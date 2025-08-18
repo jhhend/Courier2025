@@ -5,12 +5,13 @@ amount = 300;
 dist = 85;
 controllerdirection = 0;
 name = "MAJORIN";
+
 //generate regular stars
 if name != "SHOP" || name != "HOME" {
-    for (var i = 0; i < amount; i++) {
-        scale[i] = random_range(1, 2.2);
+    for (var i = 0; i < amount; i++) {		
+		scale[i] = random_range(1, 2.2);
         color[i] = choose_colors(1);
-        alpha[i] = irandom_range(.5, 1);
+        alpha[i] = random_range(.5, 1);
         angle[i] = random(360);
         dir[i] = random(360);
         distance[i] = random(dist);
