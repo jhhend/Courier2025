@@ -7,13 +7,10 @@ draw_set_font(fnt_title);
 draw_set_color(c_white);
 draw_set_halign(fa_center);
 draw_set_valign(fa_top);
-draw_text(room_width/2, room_height/5, string_hash_to_newline("YOU HAVE BEEN#ARRESTED"));
+draw_text(room_width/2, room_height/5, "YOU HAVE BEEN\nARRESTED");
 
 draw_set_font(fnt_standard);
-draw_text(room_width/2, (room_height/2)+32, string_hash_to_newline("You have been fined $" + string(global.fine) + @". 
-Your cargo has been seized.
-
-Press any key to continue."));
+draw_text(room_width/2, (room_height/2)+32, $"You have been fined ${global.fine}.\nYour cargo has been seized.\n\nPress any key to continue.");
 
 //hint
 draw_set_font(fnt_hud);

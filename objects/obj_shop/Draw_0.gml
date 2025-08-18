@@ -7,7 +7,7 @@ for (var j = 0; j <= staramount; j++) {
 draw_set_font(fnt_title);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_text(room_width/2, room_height/5, string_hash_to_newline("SHOP"));
+draw_text(room_width/2, room_height/5, "SHOP");
 
 //draw price
 draw_set_font(fnt_standard);
@@ -36,7 +36,7 @@ draw_set_valign(fa_top);
 if text[placement] != "PURCHASED" {
     draw_text((room_width/3)-24, (room_height/5)+63, string_hash_to_newline(ftext[placement]));
 } else {
-    draw_text((room_width/3)-24, (room_height/5)+63, string_hash_to_newline("You have already purchased this item."));    
+    draw_text((room_width/3)-24, (room_height/5)+63, "You have already purchased this item.");    
 }
 
 //draw money

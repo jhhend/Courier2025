@@ -19,5 +19,5 @@ draw_sprite_ext(spr_alien, 0, room_width-32, 32, 6.5, 6.5, 210, c_white, a);
 draw_set_font(fnt_title);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_text(x, y, string_hash_to_newline("COURIER"));
+draw_text(x, y, "COURIER");
 

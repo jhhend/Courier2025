@@ -39,10 +39,6 @@ if (showMoney) {
 if (global.faction == FactionType.Republic) {
     draw_set_font(fnt_hud);
     draw_set_colour(c_police);
-    draw_text(room_width/2, room_height*.75, string_hash_to_newline(@"ABILITY: [SEARCH]
-Allows you to search civillians and arrest them if they are
-holding illegal cargo. Allows you to arrest thieves.
-PASSIVE: [AUTHORITY]
-Thieves will not attempt to rob you."))
+    draw_text(room_width/2, room_height*.75, "ABILITY: [SEARCH]\nAllows you to search civillians and arrest them if they are\nholding illegal cargo. Allows you to arrest thieves.\nPASSIVE: [AUTHORITY]\nThieves will not attempt to rob you.")
 }
 

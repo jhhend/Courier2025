@@ -94,7 +94,7 @@ draw_set_alpha(1);
 //draw wanted
 if global.murder > 0 {
     draw_set_color(c_red);
-    draw_text(__view_get( e__VW.XView, 0 )+16, __view_get( e__VW.YView, 0 )+224-48+8+16, string_hash_to_newline("[WANTED]"));
+    draw_text(__view_get( e__VW.XView, 0 )+16, __view_get( e__VW.YView, 0 )+224-48+8+16, "[WANTED]");
     draw_set_color(c_white);
 }
 

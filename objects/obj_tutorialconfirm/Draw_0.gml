@@ -5,7 +5,7 @@ for (var j = 0; j <= staramount; j++) {
 draw_set_font(fnt_title);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_text(room_width/2, room_height/5, string_hash_to_newline("PLAY TUTORIAL?"));
+draw_text(room_width/2, room_height/5, "PLAY TUTORIAL?");
 
 draw_set_font(fnt_standard);
 for (var i = 0; i < array_length(text); i++) {

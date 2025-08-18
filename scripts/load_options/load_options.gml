@@ -1,6 +1,5 @@
 /// @description load_options()
 function load_options() {
-	
 	if (!file_exists("options.sav")) { return; }
 	
 	ini_open("options.sav");

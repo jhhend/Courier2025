@@ -11,7 +11,7 @@ if (pause) {
     draw_set_colour(c_white);
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
-    draw_text(__view_get( e__VW.XView, 0 ) + (__view_get( e__VW.WView, 0 )/2), mid5, string_hash_to_newline("PAUSED"));
+    draw_text(__view_get( e__VW.XView, 0 ) + (__view_get( e__VW.WView, 0 )/2), mid5, "PAUSED");
     
     draw_set_font(fnt_standard);
     for (var i = 0; i < array_length(text); i++) {
@@ -22,7 +22,7 @@ if (pause) {
         }
     }
     draw_set_font(fnt_hud);
-    draw_text(__view_get( e__VW.XView, 0 ) + (__view_get( e__VW.WView, 0 )/2), midy, string_hash_to_newline("OBJECTIVES:"));
+    draw_text(__view_get( e__VW.XView, 0 ) + (__view_get( e__VW.WView, 0 )/2), midy, "OBJECTIVES:");
     var o;
     for (var i = 0; i < global.questphase+1/*array_length(quest)*/; i++) {
         if i == global.questphase {

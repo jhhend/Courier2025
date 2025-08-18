@@ -15,7 +15,7 @@ for (var i = 0; i < 2; i++) {
     }
     draw_sprite_ext(spr_player, i, room_width/2, room_height/5, 7, 7, image_angle, c, .45)
 }
-draw_text(room_width/2, room_height/5, string_hash_to_newline("COURIER"));
+draw_text(room_width/2, room_height/5, "COURIER");
 
 draw_set_font(fnt_standard);
 for (var i = 0; i < array_length(text); i++) {

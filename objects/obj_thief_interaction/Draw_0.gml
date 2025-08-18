@@ -7,7 +7,7 @@ for (var j = 0; j <= staramount; j++) {
 draw_set_font(fnt_title);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_text(room_width/2, room_height/5, string_hash_to_newline("MOB BOSS"));
+draw_text(room_width/2, room_height/5, "MOB BOSS");
 
 draw_set_font(fnt_hud);
 if placement != array_length(text) - 1 {
@@ -33,9 +33,6 @@ if placement != 9 {
 if (global.faction == FactionType.Mafia) {
     draw_set_font(fnt_hud);
     draw_set_colour(c_thief);
-    draw_text(room_width/2, room_height*.75, string_hash_to_newline(@"ABILITY: [PICKPOCKET]
-Allows you to steal from civillians undetected.
-PASSIVE: [AFFILIATION]
-Thieves will not attempt to rob you."))
+    draw_text(room_width/2, room_height*.75, "ABILITY: [PICKPOCKET]\nAllows you to steal from civillians undetected.\nPASSIVE: [AFFILIATION]\nThieves will not attempt to rob you.");
 }
 

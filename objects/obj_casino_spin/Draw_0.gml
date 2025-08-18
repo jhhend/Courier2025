@@ -8,7 +8,7 @@ draw_set_font(fnt_title);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_colour(c_white);
-draw_text(room_width/2, room_height/5, string_hash_to_newline("SPIN"));
+draw_text(room_width/2, room_height/5, "SPIN");
 
 var xx, yy, rad, hrad;
     xx = room_width/2;
@@ -34,7 +34,7 @@ var count = 0;
 for (var i = 0; i <= 32; i++) {
     count += 11.25;
     if i mod 2 == 0 {
-    draw_text_transformed(xx + lengthdir_x(hrad, image_angle+count), yy+lengthdir_y(hrad, image_angle+count), string_hash_to_newline("?"), 1, 1, 0);    
+    draw_text_transformed(xx + lengthdir_x(hrad, image_angle+count), yy+lengthdir_y(hrad, image_angle+count), "?", 1, 1, 0);    
     }
 }
 draw_set_colour(c_yellow);
@@ -57,7 +57,7 @@ if (drawresult = true) {
             c = c_black;
             s = "WIN";
             w = floor(global.casino.pot*(1/global.casino.betType));
-            t = "Press any key to collect winnings of#$" + string(w);
+            t = $"Press any key to collect winnings of\n${w}";
             break;
         default:
             c = c_black;
@@ -70,9 +70,9 @@ if (drawresult = true) {
     draw_rectangle(xx-4, (yy+hrad)-4, xx+4, (yy+hrad)+4, false);
     draw_set_colour(c_white);
     draw_set_font(fnt_standard);
-    draw_text(xx, yy+rad+48, string_hash_to_newline(t));
+    draw_text(xx, yy+rad+48, t);
     draw_set_colour(c);
     draw_set_font(fnt_hud);
-    draw_text(xx, yy+(hrad), string_hash_to_newline(s))
+    draw_text(xx, yy+(hrad), s)
 }
 

@@ -44,7 +44,4 @@ function load_hold() {
 	global.cargoname[2] = string(base64_decode(l_cargoname2));
 	global.cargodest[2] = string(base64_decode(l_cargodest2));
 	global.cargostat[2] = string(base64_decode(l_cargostat2));
-
-
-
 }

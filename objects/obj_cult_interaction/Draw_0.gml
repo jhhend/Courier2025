@@ -8,7 +8,7 @@ draw_set_font(fnt_title);
 draw_set_color(c_white);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_text(room_width/2, room_height/5, string_hash_to_newline("DEAR LEADER"));
+draw_text(room_width/2, room_height/5, "DEAR LEADER");
 
 draw_set_font(fnt_hud);
 if placement != array_length(text) - 1 {
@@ -36,10 +36,6 @@ if (global.faction == FactionType.Cult) {
 if (global.faction == FactionType.Cult) {
     draw_set_font(fnt_hud);
     draw_set_colour(c_cult);
-    draw_text(room_width/2, room_height*.75, string_hash_to_newline(@"ABILITY: [CONVERT]
-Allows you to convert civillians to the cult's cause, raising
-the cult's power.
-PASSIVE: [BOND]
-Cultists will not attempt to attack you."))
+    draw_text(room_width/2, room_height*.75, "ABILITY: [CONVERT]\nAllows you to convert civillians to the cult's cause, raising\nthe cult's power.\nPASSIVE: [BOND]\nCultists will not attempt to attack you.");
 }
 
