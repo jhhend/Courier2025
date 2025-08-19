@@ -1,6 +1,6 @@
 
 // Stars
-for (var i = 0; i <= staramount; i++) {
+for (var i = 0; i <= starAmount; i++) {
 	var star = stars[i];
     draw_sprite_ext(spr_star, 0, star.x, star.y, star.scale, star.scale, star.angle, star.color, star.alpha);
 }
@@ -14,9 +14,17 @@ draw_text(room_width/2, room_height/5, title);
 
 // Tagline and subtag
 draw_set_font(fnt_hud);
-if (placement != array_length(text) - 1) {
+if (current != array_length(text) - 1) {
+	var currentOption = text[current];
+	for (var i = 0; i < array_length(currentOption.subtitles); i++) {
+		var subtitle = currentOption.subtitles[i];
+		var text = is_method(subtitle) ? subtitle() : subtitle;
+		draw_text(room_width/2, room_height/5 + 32 + 16*i, text);
+	}
+	/*
     draw_text_quotations(room_width/2, (room_height/5)+32, tagline)
     draw_text_parentheses(room_width/2, (room_height/5)+48, subtag);
+	*/
 }
 
 // Display the options
@@ -24,7 +32,7 @@ draw_set_font(fnt_standard);
 for (var i = 0; i < array_length(text); i++) {
 	var line = text[i];
 	var str = line.text();
-    if (placement == i) {
+    if (current  == i) {
         draw_text(room_width/2, (room_height/2)+(i*32), $">{str}<");
     } else {
         draw_text(room_width/2, (room_height/2)+(i*32), str);

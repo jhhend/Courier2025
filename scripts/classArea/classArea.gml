@@ -5,6 +5,7 @@ function Area() constructor {
 	type = AreaType.Area;
 	colors = [ ];
 	roomRef = undefined;
+	faction = -1;
 
 	map = {
 		size: 0,
@@ -20,6 +21,7 @@ function AreaMajorin() : Area() constructor {
 	type = AreaType.Majorin;
 	colors = COLORS_MAJORIN;
 	roomRef = rm_Majorin;
+	faction = FactionType.Republic;
 	
 	map = {
 		size: 85,
@@ -35,6 +37,7 @@ function AreaMinoran() : Area() constructor {
 	type = AreaType.Minoran;
 	colors = COLORS_MAJORIN;
 	roomRef = rm_Minoran;
+	faction = FactionType.Republic;
 	
 	map = {
 		size: 85/2,
@@ -49,6 +52,7 @@ function AreaBaskMajor() : Area() constructor {
 	type = AreaType.BaskMajor;
 	colors = COLORS_BASK;
 	roomRef = rm_Bask_Major;
+	faction = FactionType.Mafia;
 	
 	map = {
 		size: 85/1.5,
@@ -63,6 +67,7 @@ function AreaBaskMinor() : Area() constructor {
 	type = AreaType.BaskMinor;
 	colors = COLORS_BASK;
 	roomRef = rm_Bask_Minor;
+	faction = FactionType.Mafia;
 	
 	map = {
 		size: 85/3,
@@ -77,6 +82,7 @@ function AreaAxion() : Area() constructor {
 	type = AreaType.Axion;
 	colors = COLORS_AXION;
 	roomRef = rm_Axion;
+	faction = FactionType.Alien;
 	
 	map = {
 		size: 85/2,
@@ -91,6 +97,7 @@ function AreaKorda() : Area() constructor {
 	type = AreaType.Korda;
 	colors = COLORS_KORDA;
 	roomRef = rm_Korda;
+	faction = FactionType.Cult;
 	
 	map = {
 		size: 85/4,

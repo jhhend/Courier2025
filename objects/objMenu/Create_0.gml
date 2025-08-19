@@ -1,7 +1,7 @@
 
 title = "Title";
-text = [ "" ];
-placement = 0;
+text = [ ];
+current = 0;
 
 // Params
 showMoney = false;

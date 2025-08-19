@@ -9,9 +9,6 @@ size = 0;
 active = false;
 
 init = function(areaObj) {
-	
-
-	
 	area = areaObj;
 	
 	starCount = area.map.starCount;

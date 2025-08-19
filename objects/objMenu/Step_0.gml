@@ -1,8 +1,9 @@
-// up/down movement
-if (keyboard_check_pressed(ord("W")) && placement > 0) {
-    placement--;
-} else if (keyboard_check_pressed(ord("S")) && placement < (array_length(text) - 1)) {
-    placement++;
+
+// Up/down movement
+if (keyboard_check_pressed(ord("W")) && current > 0) {
+    current--;
+} else if (keyboard_check_pressed(ord("S")) && current < (array_length(text) - 1)) {
+    current++;
 }
 
 
@@ -14,7 +15,7 @@ if global.thiefspawn {
 }
 
 //set tagline
-switch (placement) {
+switch (current) {
     case 0: //set thiefspawn
         if global.thiefspawn {
             tagline = "Have any information about the thieves' whereabouts?";
@@ -48,10 +49,8 @@ switch (placement) {
         break;
 }
 
-// Select
+// Select option
 if (keyboard_check_pressed(vk_enter)) {
-	var current = text[placement];
-	current.action();
+	var currentOption = text[current];
+	currentOption.action();
 }
-
-

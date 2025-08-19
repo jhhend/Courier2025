@@ -11,10 +11,6 @@ function MenuLine(args) constructor {
 		onAction();
 	}
 
-	static subtitle = function() {
-		return is_method(subtitles) ? subtitles() : subtitles;
-	}
-
 	static text = function() {
 		return is_method(line) ? line() : line;
 	}
