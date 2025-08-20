@@ -230,6 +230,7 @@
     {"id":{"name":"classFactionCult","path":"scripts/classFactionCult/classFactionCult.yy",},},
     {"id":{"name":"classFactionMafia","path":"scripts/classFactionMafia/classFactionMafia.yy",},},
     {"id":{"name":"classFactionRepublic","path":"scripts/classFactionRepublic/classFactionRepublic.yy",},},
+    {"id":{"name":"classMenu","path":"scripts/classMenu/classMenu.yy",},},
     {"id":{"name":"classMenuLine","path":"scripts/classMenuLine/classMenuLine.yy",},},
     {"id":{"name":"clear_slot","path":"scripts/clear_slot/clear_slot.yy",},},
     {"id":{"name":"create_name","path":"scripts/create_name/create_name.yy",},},

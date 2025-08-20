@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"classMenu",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"classMenu",
+  "parent":{
+    "name":"Menu",
+    "path":"folders/Conversion/Menu.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

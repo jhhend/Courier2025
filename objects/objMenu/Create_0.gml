@@ -1,10 +1,43 @@
 
 title = "Title";
-text = [ ];
-current = 0;
 
-// Params
-showMoney = false;
+menus = new Map();
+
+text = [ ];
+current = "main";
+
+// Build out a test menu set so we don't have to 
+var main = new Menu(id, {
+	title: "Main Menu"
+});
+main.addOption(MenuLine, {
+	text: "Option", 
+	subtitles: [ "By viewing this option", "I am displaying these subtitles" ],
+	onAction: function() {
+		audio_play_sound(snd_laser, 1, false);		
+	}
+});
+main.addOption(MenuLineSwitch, {
+	text: "Submenu",
+	subtitles: "This is a test",
+	target: "sub"
+});
+main.addOption(MenuLineClose, {
+	text: "Exit",
+	subtitles: [ "Bye bye", "See you later" ]
+});
+menus.add("main", main);
+
+var sub = new Menu(id, {
+	title: "Sub Menu",
+	showMoney: true
+});
+sub.addOption(MenuLineSwitch, {
+	text: "Return",
+	subtitles: [ "We made it to the submenu!" ],
+	target: "main"
+});
+menus.add("sub", sub);
 
 // Stars
 stars = [ ];
@@ -18,4 +51,13 @@ repeat (starAmount) {
 		alpha: random_range(.25, .75),
 		angle: random(360)
 	});
+}
+
+switchTo = function(key) {
+	current = key;
+}
+
+getCurrentMenu = function() {
+	var currentMenu = menus.get(current);
+	return currentMenu;
 }
