@@ -7,6 +7,7 @@ text = [ ];
 current = "main";
 
 // Build out a test menu set so we don't have to 
+/*
 var main = new Menu(id, {
 	title: "Main Menu"
 });
@@ -38,6 +39,7 @@ sub.addOption(MenuLineSwitch, {
 	target: "main"
 });
 menus.add("sub", sub);
+*/
 
 // Stars
 stars = [ ];
