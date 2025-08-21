@@ -35,8 +35,11 @@ function Menu(objRef, args={}) constructor {
 		var current = options[index];
 		draw_set_font(fnt_hud);
 		draw_set_color(c_white);
-		for (var i = 0; i < array_length(current.subtitles); i++) {
-			var subtitle = current.subtitles[i];
+		
+		var subtitles = current.getSubtitles();
+		
+		for (var i = 0; i < array_length(subtitles); i++) {
+			var subtitle = subtitles[i];
 			var text = is_method(subtitle) ? subtitle() : subtitle;
 			draw_text(xx, yy + 16*i, text);
 		}		
@@ -44,12 +47,12 @@ function Menu(objRef, args={}) constructor {
 
 	static drawOptions = function(xx, yy) {
 		draw_set_font(fnt_standard);
-		draw_set_color(c_white);
 		for (var i = 0; i < array_length(options); i++) {
 			var line = options[i];
 			//show_message(line);
 			var lineText = line.text();
 			//show_message(lineText);
+			draw_set_color(line.isEnabled() ? c_white : c_gray);
 		    draw_text(xx, yy+(i*32), index == i ? $">{lineText}<" : lineText);
 		}
 	}
