@@ -8,6 +8,17 @@ function FactionRepublic() : Faction() constructor {
 	
 	activeAbility = new FactionAbilityRepublic();
 
+	static canJoin = function() {
+		if (global.faction != -1) { return false; }
+		if (global.state.legalTotal < 10) { return false; }
+	
+		return true;
+	}
+
+	static getJoinRequirementText = function() {
+		return $"{global.state.legalTotal}/10 legal cargo delivered.";
+	}
+
 }
 
 function FactionAbilityRepublic() : FactionAbility() constructor {

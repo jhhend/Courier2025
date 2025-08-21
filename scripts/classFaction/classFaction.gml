@@ -8,10 +8,17 @@ function Faction() constructor {
 	
 	activeAbility = undefined;
 	passive = undefined;
+	
 	static active = function() {
 		if (activeAbility == undefined) { return; }
 		activeAbility.action();
 	}
+	
+	// Overload in children
+	static canJoin = function() { return false; }
+	
+	static getJoinRequirementText() { return ""; }
+	
 }
 
 function FactionAbility() constructor {
