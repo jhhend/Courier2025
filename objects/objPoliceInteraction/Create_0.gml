@@ -60,7 +60,6 @@ var inquireArgs = {
 		
 	},
 	enabled: function() {
-		return true;
 		var republic = global.factions.get(FactionType.Republic);
 		return republic.canJoin();
 	}

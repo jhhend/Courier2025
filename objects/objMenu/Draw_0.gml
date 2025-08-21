@@ -5,9 +5,13 @@ for (var i = 0; i < starAmount; i++) {
     draw_sprite_ext(spr_star, 0, star.x, star.y, star.scale, star.scale, star.angle, star.color, star.alpha);
 }
 
+// todo this is dubious at best
+var width = view_wport[0]/2;
+var height = view_hport[0]/2;
+
 var current = getCurrentMenu();
 if (current == undefined) {
-	draw_text(room_width/2, room_height/2, "oh no");
+	draw_text(width/2, height/2, "oh no");
 	exit;
 }
 
@@ -16,17 +20,17 @@ draw_set_font(fnt_title);
 draw_set_colour(c_white);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_text(room_width/2, room_height/5, current.title);
+draw_text(width/2, height/5, current.title);
 
 // Subtitles
-current.drawSubtitles(room_width/2, room_height/5 + 32);
+current.drawSubtitles(width/2, height/5 + 32);
 
 // Display the options
-current.drawOptions(room_width/2, room_height/2);
+current.drawOptions(width/2, height/2);
 
 // Display money
 if (current.showMoney) {
-	draw_text(room_width/2, room_height-16, $"Currency: ${global.state.money}");
+	draw_text(width/2, height-16, $"Currency: ${global.state.money}");
 }
 
 // Draw anything additional

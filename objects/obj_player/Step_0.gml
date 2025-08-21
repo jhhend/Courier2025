@@ -196,9 +196,14 @@ switch (room) {
 }
 
 if instance_exists(obf) && collision_circle(obf.x, obf.y, obf.radius, self, true, false) && keyboard_check_pressed(vk_enter) {
-    global.xprev = x;
+    /*
+	global.xprev = x;
     global.yprev = y;
     room_goto(rm);
+	*/
+	var menu = instance_create_layer(0, 0, "Menu", objPoliceInteraction);
+	obj_view.target = menu;
+	obj_view.jumpToTarget();
 }
 
 //go to casino

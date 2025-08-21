@@ -52,8 +52,13 @@ function Menu(objRef, args={}) constructor {
 			//show_message(line);
 			var lineText = line.text();
 			//show_message(lineText);
-			draw_set_color(line.isEnabled() ? c_white : c_gray);
-		    draw_text(xx, yy+(i*32), index == i ? $">{lineText}<" : lineText);
+			var selected = index == i;
+			if (selected) {
+				draw_set_color(line.isEnabled() ? c_orange  : merge_color(c_gray, c_orange, .5));
+			} else {
+				draw_set_color(line.isEnabled() ? c_white : c_gray);
+			}
+		    draw_text(xx, yy+(i*32), selected ? $">{lineText}<" : lineText);
 		}
 	}
 

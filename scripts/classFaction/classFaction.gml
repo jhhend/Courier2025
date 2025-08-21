@@ -5,8 +5,10 @@ function Faction() constructor {
 	label = "Label";
 	type = FactionType.Faction;
 	color = c_white;
+	price = 0;
 	
 	activeAbility = undefined;
+	leaderAbility = undefined;
 	passive = undefined;
 	
 	static active = function() {
@@ -16,8 +18,7 @@ function Faction() constructor {
 	
 	// Overload in children
 	static canJoin = function() { return false; }
-	
-	static getJoinRequirementText() { return ""; }
+	static getJoinRequirementText = function() { return ""; }
 	
 }
 

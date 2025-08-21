@@ -26,7 +26,7 @@ function MenuLine(args) constructor {
 // For closing out of a menu entirely
 function MenuLineClose(args) : MenuLine(args) constructor {
 	static action = function() {
-		instance_destroy(obj);
+		obj.close();
 	}
 }
 

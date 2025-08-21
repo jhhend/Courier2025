@@ -46,8 +46,8 @@ stars = [ ];
 starAmount = 500;
 repeat (starAmount) {
 	array_push(stars, {
-		x: random_range(0, room_width),
-		y: random_range(0, room_height),
+		x: random_range(0,  view_wport[0]/2),
+		y: random_range(0,  view_hport[0]/2),
 		scale: random_range(.5, .9),
 		color: choose_colors(0),
 		alpha: random_range(.25, .75),
@@ -63,3 +63,13 @@ getCurrentMenu = function() {
 	var currentMenu = menus.get(current);
 	return currentMenu;
 }
+
+close = function() {
+	instance_destroy();
+	instance_activate_all();
+	obj_view.target = obj_player;
+	obj_view.jumpToTarget();
+}
+
+instance_deactivate_all(true);
+instance_activate_object(obj_view);
