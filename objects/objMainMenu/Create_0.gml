@@ -15,8 +15,9 @@ var main = new Menu(id, {
 	title: "COURIER"
 });
 
-main.addOption(MenuLine, {
-	text: "Play"
+main.addOption(MenuLineSwitch, {
+	text: "Play",
+	target: "play"
 });
 
 main.addOption(MenuLineSwitch, {
@@ -80,5 +81,76 @@ options.addOption(MenuLineSwitch, {
 });
 
 menus.add("options", options);
+
+#endregion
+
+#region Menu - play
+
+var play = new Menu(id, {
+	title: "Play"
+});
+
+play.addOption(MenuLine, {
+	text: "Load Save"
+});
+
+play.addOption(MenuLineSwitch, {
+	text: "New Game",
+	target: "tutorial"
+});
+
+play.addOption(MenuLineSwitch, {
+	text: "Back",
+	target: "main"
+});
+
+menus.add("play", play);
+
+#endregion 
+
+#region Menu - tutorial
+
+var tutorial = new Menu(id, {
+	title: "Play Tutorial?"
+});
+
+tutorial.addOption(MenuLine, {
+	text: "Yes"
+});
+
+tutorial.addOption(MenuLine, {
+	text: "No"
+});
+
+tutorial.addOption(MenuLineSwitch, {
+	text: "Back",
+	target: "play"
+})
+
+menus.add("tutorial", tutorial);
+
+#endregion 
+
+#region Menu - deletesaveconfirm
+
+var deleteSaveConfirm = new Menu(id, {
+	title: "Are you sure?",
+	titleColor: c_thief
+});
+
+deleteSaveConfirm.addOption(MenuLine, {
+	text: "Yes"
+});
+
+deleteSaveConfirm.addOption(MenuLine, {
+	text: "No"
+});
+
+deleteSaveConfirm.addOption(MenuLineSwitch, {
+	text: "Back",
+	target: "options"
+})
+
+menus.add("deleteSaveConfirm", deleteSaveConfirm);
 
 #endregion

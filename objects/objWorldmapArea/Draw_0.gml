@@ -12,5 +12,5 @@ if (inRange) {
     draw_set_halign(fa_center);
     draw_set_halign(fa_middle);
 	draw_set_color(c_white);
-    draw_text(x, y - size - 16, string_upper(name));
+    draw_text(floor(x), floor(y - size - 16), string_upper(name));
 }

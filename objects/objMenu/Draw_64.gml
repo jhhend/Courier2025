@@ -5,9 +5,8 @@ for (var i = 0; i < starAmount; i++) {
     draw_sprite_ext(spr_star, 0, star.x, star.y, star.scale, star.scale, star.angle, star.color, star.alpha);
 }
 
-// todo this is dubious at best
-var width = view_wport[0]/2;
-var height = view_hport[0]/2;
+var width = display_get_gui_width();
+var height = display_get_gui_height();
 
 var current = getCurrentMenu();
 if (current == undefined) {
@@ -17,7 +16,7 @@ if (current == undefined) {
 
 // Title
 draw_set_font(fnt_title);
-draw_set_colour(c_white);
+draw_set_colour(current.titleColor);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_text(width/2, height/5, current.title);

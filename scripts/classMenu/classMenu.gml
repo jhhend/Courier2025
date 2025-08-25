@@ -6,6 +6,7 @@ function Menu(objRef, args={}) constructor {
 	index = 0;
 	
 	title = args[$ "title"] ?? "Menu Title";
+	titleColor = args[$ "titleColor"] ?? c_white;
 	showMoney = args[$ "showMoney"] ?? false;
 	additional = args[$ "additional"] ?? function() { }
 
@@ -46,7 +47,7 @@ function Menu(objRef, args={}) constructor {
 	}
 
 	static drawOptions = function(xx, yy) {
-		draw_set_font(fnt_standard);
+		draw_set_font(fnt_hud);
 		for (var i = 0; i < array_length(options); i++) {
 			var line = options[i];
 			//show_message(line);

@@ -9,3 +9,5 @@ for (var i = 0; i < array_length(keys); i++) {
 	poi.init(area);
 	
 }
+
+window_set_size(room_width, room_height);

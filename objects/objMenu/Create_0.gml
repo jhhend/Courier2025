@@ -46,8 +46,8 @@ stars = [ ];
 starAmount = 500;
 repeat (starAmount) {
 	array_push(stars, {
-		x: random_range(0,  view_wport[0]/2),
-		y: random_range(0,  view_hport[0]/2),
+		x: random_range(0,  display_get_gui_width()),
+		y: random_range(0,  display_get_gui_height()),
 		scale: random_range(.5, .9),
 		color: choose_colors(0),
 		alpha: random_range(.25, .75),
