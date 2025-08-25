@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"classMenuLine",
+  "%Name":"classMenuOption",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"classMenuLine",
+  "name":"classMenuOption",
   "parent":{
     "name":"Menu",
     "path":"folders/Conversion/Menu.yy",

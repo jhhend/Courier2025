@@ -1,4 +1,7 @@
-with (other) {
+
+show_message("i was just created")
+ 
+//with (other) {
 for (var i = 0; i < 3; i++) {
     global.hull[i] = " ";
     global.slotcol[i] = c_white;
@@ -8,4 +11,4 @@ for (var i = 0; i < 3; i++) {
     global.cargostat[i] = "";
 }
 
-}
+//}

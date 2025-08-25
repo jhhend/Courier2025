@@ -1,5 +1,7 @@
 randomize(); //set a random seed
 
+
+
 //player stats
 global.maxshields = 0;
 global.shields = global.maxshields;
@@ -35,6 +37,7 @@ global.endentityamount = SOME; //amount of entities that will spawn
 
 //create pause
 instance_create(0, 0, obj_pause);
+instance_create(0, 0, obj_data);
 
 if !instance_exists(obj_fps_display) {
     instance_create(x, y, obj_fps_display);
@@ -42,5 +45,7 @@ if !instance_exists(obj_fps_display) {
 
 load_options();
 
-room_goto_next();
+window_set_fullscreen(false)
+
+room_goto(rm_menu);
 

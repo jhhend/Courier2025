@@ -13,3 +13,4 @@ if (global.state.money < 0) {
     global.state.money = 0;
 }
 
+show_debug_message("I exist");

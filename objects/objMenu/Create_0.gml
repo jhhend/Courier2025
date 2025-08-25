@@ -6,24 +6,26 @@ menus = new Map();
 text = [ ];
 current = "main";
 
+controlView = false;
+
 // Build out a test menu set so we don't have to 
 /*
 var main = new Menu(id, {
 	title: "Main Menu"
 });
-main.addOption(MenuLine, {
+main.addOption(MenuOption, {
 	text: "Option", 
 	subtitles: [ "By viewing this option", "I am displaying these subtitles" ],
 	onAction: function() {
 		audio_play_sound(snd_laser, 1, false);		
 	}
 });
-main.addOption(MenuLineSwitch, {
+main.addOption(MenuOptionSwitch, {
 	text: "Submenu",
 	subtitles: "This is a test",
 	target: "sub"
 });
-main.addOption(MenuLineClose, {
+main.addOption(MenuOptionClose, {
 	text: "Exit",
 	subtitles: [ "Bye bye", "See you later" ]
 });
@@ -33,7 +35,7 @@ var sub = new Menu(id, {
 	title: "Sub Menu",
 	showMoney: true
 });
-sub.addOption(MenuLineSwitch, {
+sub.addOption(MenuOptionSwitch, {
 	text: "Return",
 	subtitles: [ "We made it to the submenu!" ],
 	target: "main"
@@ -66,10 +68,14 @@ getCurrentMenu = function() {
 
 close = function() {
 	instance_destroy();
-	instance_activate_all();
-	obj_view.target = obj_player;
-	obj_view.jumpToTarget();
+	if (controlView) {
+		instance_activate_all();
+		obj_view.target = obj_player;
+		obj_view.jumpToTarget();
+	}
 }
 
-instance_deactivate_all(true);
-instance_activate_object(obj_view);
+if (controlView) {
+	instance_deactivate_all(true);
+	instance_activate_object(obj_view);
+}

@@ -3,6 +3,8 @@ event_inherited();
 
 price = 750;
 
+controlView = true;
+
 var main = new Menu(id, {
 	title: "Police Chief",
 	additional: function() {
@@ -13,7 +15,7 @@ var main = new Menu(id, {
 	}
 });
 
-main.addOption(MenuLine, {
+main.addOption(MenuOption, {
 	text: method({ price }, function() { return $"Perform Thief Raid (${global.thiefspawn ? price : 0 })"}),
 	subtitles: function() {
 		if (global.thiefspawn) {
@@ -72,16 +74,16 @@ var leaveArgs = {
 };
 
 /*
-main.addOption(MenuLineSwitch, {
+main.addOption(MenuOptionSwitch, {
 	text: function() { return global.faction == FactionType.Republic ? "Leave Faction" : "Inquire"; },
 	target: function() { return global.faction == FactionType.Republic ? "leave" : "inquire"; }
 });
 */
 
 
-main.addOption(MenuLineSwitch, global.faction == FactionType.Republic ? leaveArgs : inquireArgs);
+main.addOption(MenuOptionSwitch, global.faction == FactionType.Republic ? leaveArgs : inquireArgs);
 
-main.addOption(MenuLineClose, {
+main.addOption(MenuOptionClose, {
 	text: "Back"
 });
 
@@ -95,3 +97,9 @@ var leave = new Menu(id, {
 menus.add("main", main);
 menus.add("inquire", inquire);
 menus.add("leave", leave);
+
+
+if (controlView) {
+	instance_deactivate_all(true);
+	instance_activate_object(obj_view);
+}

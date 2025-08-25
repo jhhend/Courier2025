@@ -15,21 +15,21 @@ var main = new Menu(id, {
 	title: "COURIER"
 });
 
-main.addOption(MenuLineSwitch, {
+main.addOption(MenuOptionSwitch, {
 	text: "Play",
 	target: "play"
 });
 
-main.addOption(MenuLineSwitch, {
+main.addOption(MenuOptionSwitch, {
 	text: "Options",
 	target: "options"
 });
 
-main.addOption(MenuLine, {
+main.addOption(MenuOption, {
 	text: "Credits"
 });
 
-main.addOption(MenuLine, {
+main.addOption(MenuOption, {
 	text: "Quit",
 	action: function() {
 		save_options();
@@ -47,17 +47,17 @@ var options = new Menu(id, {
 	title: "Options"
 });
 
-options.addOption(MenuLine, {
+options.addOption(MenuOption, {
 	text: function() { return $"Sound: {global.settings.get("sound") ? "On" : "Off"}"; },
 	action: function() { global.settings.toggle("sound"); }
 });
 
-options.addOption(MenuLine, {
+options.addOption(MenuOption, {
 	text: function() { return $"Music: {global.settings.get("music") ? "On" : "Off"}"; },
 	action: function() { global.settings.toggle("music"); }
 });
 
-options.addOption(MenuLine, {
+options.addOption(MenuOption, {
 	text: function() { return $"Fullscreen: {global.settings.get("fullscreen") ? "On" : "Off"}" },
 	action: function() {
 		global.settings.toggle("fullscreen");
@@ -65,17 +65,17 @@ options.addOption(MenuLine, {
 	}
 });
 
-options.addOption(MenuLine, {
+options.addOption(MenuOption, {
 	text: function() { return $"FPS Counter: {global.settings.get("showFps") ? "On" : "Off"}"; },
 	action: function() { global.settings.toggle("showFps"); }
 });
 
-options.addOption(MenuLineSwitch, {
+options.addOption(MenuOptionSwitch, {
 	text: "Delete Save",
 	target: "deleteSaveConfirm"
 });
 
-options.addOption(MenuLineSwitch, {
+options.addOption(MenuOptionSwitch, {
 	text: "Back",
 	target: "main"
 });
@@ -90,16 +90,16 @@ var play = new Menu(id, {
 	title: "Play"
 });
 
-play.addOption(MenuLine, {
+play.addOption(MenuOption, {
 	text: "Load Save"
 });
 
-play.addOption(MenuLineSwitch, {
+play.addOption(MenuOptionSwitch, {
 	text: "New Game",
 	target: "tutorial"
 });
 
-play.addOption(MenuLineSwitch, {
+play.addOption(MenuOptionSwitch, {
 	text: "Back",
 	target: "main"
 });
@@ -114,15 +114,21 @@ var tutorial = new Menu(id, {
 	title: "Play Tutorial?"
 });
 
-tutorial.addOption(MenuLine, {
-	text: "Yes"
+tutorial.addOption(MenuOption, {
+	text: "Yes",
+	action: function() {
+		room_goto(rm_tutorial);
+	}
 });
 
-tutorial.addOption(MenuLine, {
-	text: "No"
+tutorial.addOption(MenuOption, {
+	text: "No",
+	action: function() {
+		room_goto(rm_intro)
+	}
 });
 
-tutorial.addOption(MenuLineSwitch, {
+tutorial.addOption(MenuOptionSwitch, {
 	text: "Back",
 	target: "play"
 })
@@ -138,15 +144,15 @@ var deleteSaveConfirm = new Menu(id, {
 	titleColor: c_thief
 });
 
-deleteSaveConfirm.addOption(MenuLine, {
+deleteSaveConfirm.addOption(MenuOption, {
 	text: "Yes"
 });
 
-deleteSaveConfirm.addOption(MenuLine, {
+deleteSaveConfirm.addOption(MenuOption, {
 	text: "No"
 });
 
-deleteSaveConfirm.addOption(MenuLineSwitch, {
+deleteSaveConfirm.addOption(MenuOptionSwitch, {
 	text: "Back",
 	target: "options"
 })

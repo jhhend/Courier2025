@@ -8,8 +8,8 @@
   "name":"obj_name",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"zzz_deprecated",
+    "path":"folders/Conversion/zzz_deprecated.yy",
   },
   "parentObjectId":null,
   "persistent":false,

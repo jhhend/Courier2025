@@ -1,5 +1,5 @@
 
-function MenuLine(args) constructor {
+function MenuOption(args) constructor {
 	
 	line = args[$ "text"] ?? "";
 	subtitles = args[$ "subtitles"] ?? [ ];
@@ -24,14 +24,14 @@ function MenuLine(args) constructor {
 }
 
 // For closing out of a menu entirely
-function MenuLineClose(args) : MenuLine(args) constructor {
+function MenuOptionClose(args) : MenuOption(args) constructor {
 	static action = function() {
 		obj.close();
 	}
 }
 
 // For switching between menus
-function MenuLineSwitch(args) : MenuLine(args) constructor {
+function MenuOptionSwitch(args) : MenuOption(args) constructor {
 	target = args[$ "target"] ?? "";
 	
 	static getTarget = function() {
